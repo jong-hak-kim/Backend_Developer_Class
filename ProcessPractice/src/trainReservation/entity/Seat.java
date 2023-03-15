@@ -26,6 +26,10 @@ public class Seat {
 	public boolean isSeatStatus() {
 		return seatStatus;
 	}
+	
+	public void setSeatStatus(boolean seatStatus) {
+		this.seatStatus = seatStatus;
+	}
 
 	@Override
 	public String toString() {
