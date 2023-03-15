@@ -36,12 +36,13 @@ public class ReservationService {
 
 			for (int stopStationIndex = 0; stopStationIndex < stopStations.size(); stopStationIndex++) {
 
-				String stopStatonName = stopStations.get(stopStationIndex).getStationName();
+				StopStation stopStation = stopStations.get(stopStationIndex);
+				String stopStatonName = stopStation.getStationName();
 
 				if (!dto.isEqualDepartureStation(stopStatonName))
 					continue;
 
-				LocalTime stationDepartureTime = LocalTime.parse(dto.getDepartureTime(), timeformatter);
+				LocalTime stationDepartureTime = LocalTime.parse(stopStation.getDepartureTime(), timeformatter);
 
 				// 입력한 시간 전에 출발하는 기차이면 검색할 필요 없으므로 break 해줌
 				if (stationDepartureTime.isBefore(departureTime))
