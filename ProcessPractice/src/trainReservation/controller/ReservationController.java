@@ -4,6 +4,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import trainReservation.dto.GetReservationDto;
 import trainReservation.dto.GetTrainListDto;
 import trainReservation.dto.PostReservationDto;
 import trainReservation.entity.ReservationInfo;
@@ -19,6 +20,12 @@ public class ReservationController {
 
 	private ReservationService reservationService;
 
+	private GetTrainListDto getTrainListDto;
+
+	private GetReservationDto getReservationDto;
+
+	private PostReservationDto postReservationDto;
+
 	public ReservationController() {
 		this.reservationService = new ReservationService();
 	}
@@ -26,7 +33,7 @@ public class ReservationController {
 	public void reservation() {
 		while (true) {
 
-			GetTrainListDto getTrainListDto = new GetTrainListDto(); // 기본 생성자에 바로 넣어주어 선언하자마자 입력값 처리 가능
+			getTrainListDto = new GetTrainListDto(); // 기본 생성자에 바로 넣어주어 선언하자마자 입력값 처리 가능
 
 			LocalTime departureTime = null;
 
@@ -53,21 +60,44 @@ public class ReservationController {
 			}
 
 			List<Train> possibleTrains = reservationService.getPossibleTrainList(getTrainListDto, departureTime); // 서비스
-																													// 로직
-
 			System.out.println(possibleTrains.toString());
 
-			ReservationInfo reservationInfo = null;
-			while (true) {
-				PostReservationDto postReservationDto = new PostReservationDto(getTrainListDto.getNumberOfPeople());
-				reservationInfo = reservationService.postReservation(postReservationDto, getTrainListDto);
-				if (reservationInfo == null)
-					continue;
-				break;
+			postReservation();
+			break;
+		}
+	}
+
+	public void postReservation() {
+		while (true) {
+			postReservationDto = new PostReservationDto(getTrainListDto.getNumberOfPeople());
+			ReservationInfo reservationInfo = reservationService.postReservation(postReservationDto, getTrainListDto);
+			if (reservationInfo == null)
+				continue;
+			System.out.println(reservationInfo.toString());
+			break;
+		}
+
+	}
+
+	public void getReservation() {
+
+		while (true) {
+			getReservationDto = new GetReservationDto();
+			String reservationNumber = getReservationDto.getReservationNumber();
+
+			if (reservationNumber.isBlank()) {
+				System.out.println("예약 번호를 입력하세요.");
+				continue;
 			}
 
-			System.out.println(reservationInfo.toString());
+			ReservationInfo reservationInfo = reservationService.getReservation(getReservationDto);
 
+			// 조건에 따라서 다른 값을 반환하고자 한다면 삼항 연산자도 사용할 수 있다
+			// 사용 안 하는 것이 좋음
+			String message = reservationInfo == null ? "해당하는 예약 번호가 없습니다." : reservationInfo.toString();
+			
+			System.out.println(message);
+			break;
 		}
 
 	}

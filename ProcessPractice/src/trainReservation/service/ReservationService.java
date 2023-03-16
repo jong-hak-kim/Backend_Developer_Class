@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+import trainReservation.dto.GetReservationDto;
 import trainReservation.dto.GetTrainListDto;
 import trainReservation.dto.PostReservationDto;
 import trainReservation.entity.Cost;
@@ -43,7 +44,8 @@ public class ReservationService {
 
 				if (!dto.isEqualDepartureStation(stopStatonName))
 					continue;
-
+				if (stopStation.getDepartureTime().equals(""))
+					continue;
 				LocalTime stationDepartureTime = LocalTime.parse(stopStation.getDepartureTime(), timeformatter);
 
 				// 입력한 시간 전에 출발하는 기차이면 검색할 필요 없으므로 break 해줌
@@ -176,9 +178,25 @@ public class ReservationService {
 		ReservationInfo reservationInfo = new ReservationInfo(postReservationDto.getTrainNumber(),
 				postReservationDto.getSeats(), getTrainListDto.getDepartureStation(), departureTime,
 				getTrainListDto.getArrivalStation(), arrivalTime, totalCost); // 예약 정보 객체 생성
-		
+
 		reservations.add(reservationInfo);
 
+		return reservationInfo;
+	}
+
+	public ReservationInfo getReservation(GetReservationDto dto) {
+		ReservationInfo reservationInfo = null;
+		String reservationNumber = dto.getReservationNumber();
+
+		for (ReservationInfo item : reservations) {
+			boolean isEqualReservationNumber = reservationNumber.equals(item.getReservationNumber());
+
+			if (!isEqualReservationNumber)
+				continue;
+
+			reservationInfo = item;
+			break;
+		}
 		return reservationInfo;
 	}
 
