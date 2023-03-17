@@ -1,39 +1,27 @@
-package board.entity;
+package board.dto.request.user;
 
-import board.dto.request.user.SignUpDto;
+public class SignUpDto {
 
-public class User {
 	private String email;
 	private String password;
-//	private String passwordCheck; 지속적으로 관리할 필요가 없기 때문에 선언하지 않음
+	private String passwordCheck;
 	private String nickname;
 	private String phoneNumber;
 	private String address;
 	private String addressDetail;
-	private String profileImageUrl;
 
-	public User() {
+	public SignUpDto() {
 	}
 
-	public User(String email, String password, String nickname, String phoneNumber, String address,
-			String addressDetail, String profileImageUrl) {
-		super();
+	public SignUpDto(String email, String password, String passwordCheck, String nickname, String phoneNumber,
+			String address, String addressDetail) {
 		this.email = email;
 		this.password = password;
+		this.passwordCheck = passwordCheck;
 		this.nickname = nickname;
 		this.phoneNumber = phoneNumber;
 		this.address = address;
 		this.addressDetail = addressDetail;
-		this.profileImageUrl = profileImageUrl;
-	}
-	
-	public User(SignUpDto dto) {
-		this.email = dto.getEmail();
-		this.password = dto.getPassword();
-		this.nickname = dto.getNickname();
-		this.phoneNumber = dto.getPhoneNumber();
-		this.address = dto.getAddress();
-		this.addressDetail = dto.getAddressDetail();
 	}
 
 	public String getEmail() {
@@ -42,6 +30,10 @@ public class User {
 
 	public String getPassword() {
 		return password;
+	}
+
+	public String getPasswordCheck() {
+		return passwordCheck;
 	}
 
 	public String getNickname() {
@@ -60,16 +52,16 @@ public class User {
 		return addressDetail;
 	}
 
-	public String getProfileImageUrl() {
-		return profileImageUrl;
-	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public void setPasswordCheck(String passwordCheck) {
+		this.passwordCheck = passwordCheck;
 	}
 
 	public void setNickname(String nickname) {
@@ -88,15 +80,18 @@ public class User {
 		this.addressDetail = addressDetail;
 	}
 
-	public void setProfileImageUrl(String profileImageUrl) {
-		this.profileImageUrl = profileImageUrl;
-	}
-
 	@Override
 	public String toString() {
-		return "User [email=" + email + ", password=" + password + ", nickname=" + nickname + ", phoneNumber="
-				+ phoneNumber + ", address=" + address + ", addressDetail=" + addressDetail + ", profileImageUrl="
-				+ profileImageUrl + "]";
+		return "SignUpDto [email=" + email + ", password=" + password + ", passwordCheck=" + passwordCheck
+				+ ", nickname=" + nickname + ", phoneNumber=" + phoneNumber + ", address=" + address
+				+ ", addressDetail=" + addressDetail + "]";
+	}
+
+	public boolean validate() {
+		boolean result = this.email.isBlank() || this.password.isBlank() || this.passwordCheck.isBlank()
+				|| this.nickname.isBlank() || this.phoneNumber.isBlank() || this.address.isBlank()
+				|| this.addressDetail.isBlank();
+		return result;
 	}
 
 }

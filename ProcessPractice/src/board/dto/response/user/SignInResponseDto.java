@@ -1,47 +1,44 @@
-package board.entity;
+package board.dto.response.user;
 
-import board.dto.request.user.SignUpDto;
+import java.util.UUID;
 
-public class User {
+import board.entity.User;
+
+public class SignInResponseDto {
 	private String email;
-	private String password;
-//	private String passwordCheck; 지속적으로 관리할 필요가 없기 때문에 선언하지 않음
 	private String nickname;
 	private String phoneNumber;
 	private String address;
 	private String addressDetail;
 	private String profileImageUrl;
+	private String token;
 
-	public User() {
+	public SignInResponseDto() {
 	}
 
-	public User(String email, String password, String nickname, String phoneNumber, String address,
-			String addressDetail, String profileImageUrl) {
-		super();
+	public SignInResponseDto(String email, String nickname, String phoneNumber, String address, String addressDetail,
+			String profileImageUrl, String token) {
 		this.email = email;
-		this.password = password;
 		this.nickname = nickname;
 		this.phoneNumber = phoneNumber;
 		this.address = address;
 		this.addressDetail = addressDetail;
 		this.profileImageUrl = profileImageUrl;
+		this.token = token;
+	}
+
+	public SignInResponseDto(User user) {
+		this.email = user.getEmail();
+		this.nickname = user.getNickname();
+		this.phoneNumber = user.getPhoneNumber();
+		this.address = user.getAddress();
+		this.addressDetail = user.getAddressDetail();
+		this.profileImageUrl = user.getProfileImageUrl();
+		this.token = UUID.randomUUID().toString();
 	}
 	
-	public User(SignUpDto dto) {
-		this.email = dto.getEmail();
-		this.password = dto.getPassword();
-		this.nickname = dto.getNickname();
-		this.phoneNumber = dto.getPhoneNumber();
-		this.address = dto.getAddress();
-		this.addressDetail = dto.getAddressDetail();
-	}
-
 	public String getEmail() {
 		return email;
-	}
-
-	public String getPassword() {
-		return password;
 	}
 
 	public String getNickname() {
@@ -64,12 +61,12 @@ public class User {
 		return profileImageUrl;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public String getToken() {
+		return token;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public void setNickname(String nickname) {
@@ -92,11 +89,15 @@ public class User {
 		this.profileImageUrl = profileImageUrl;
 	}
 
+	public void setToken(String token) {
+		this.token = token;
+	}
+
 	@Override
 	public String toString() {
-		return "User [email=" + email + ", password=" + password + ", nickname=" + nickname + ", phoneNumber="
-				+ phoneNumber + ", address=" + address + ", addressDetail=" + addressDetail + ", profileImageUrl="
-				+ profileImageUrl + "]";
+		return "SignInResponseDto [email=" + email + ", nickname=" + nickname + ", phoneNumber=" + phoneNumber
+				+ ", address=" + address + ", addressDetail=" + addressDetail + ", profileImageUrl=" + profileImageUrl
+				+ ", token=" + token + "]";
 	}
 
 }
