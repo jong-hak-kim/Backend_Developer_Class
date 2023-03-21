@@ -6,7 +6,7 @@ import board.entity.Board;
 import board.entity.Comment;
 import board.entity.Like;
 
-public class GetBoardResponseDto {
+public class PatchBoardResponseDto {
 	private int boardNumber;
 	private String title;
 	private String content;
@@ -20,12 +20,12 @@ public class GetBoardResponseDto {
 	private int commentCount;
 	private List<Comment> commentList;
 
-	public GetBoardResponseDto() {
+	public PatchBoardResponseDto() {
 	}
 
-	public GetBoardResponseDto(int boardNumber, String title, String content, String boardImageUrl, String writerEmail,
-			String writerProfileImageUrl, String writerNickname, String writeDate, int likeCount, List<Like> likeList,
-			int commentCount, List<Comment> commentList) {
+	public PatchBoardResponseDto(int boardNumber, String title, String content, String boardImageUrl,
+			String writerEmail, String writerProfileImageUrl, String writerNickname, String writeDate, int likeCount,
+			List<Like> likeList, int commentCount, List<Comment> commentList) {
 		this.boardNumber = boardNumber;
 		this.title = title;
 		this.content = content;
@@ -40,15 +40,7 @@ public class GetBoardResponseDto {
 		this.commentList = commentList;
 	}
 
-	public int getBoardNumber() {
-		return boardNumber;
-	}
-
-	public void setBoardNumber(int boardNumber) {
-		this.boardNumber = boardNumber;
-	}
-
-	public GetBoardResponseDto(Board board) {
+	public PatchBoardResponseDto(Board board) {
 		this.boardNumber = board.getBoardNumber();
 		this.title = board.getTitle();
 		this.content = board.getContent();
@@ -61,6 +53,10 @@ public class GetBoardResponseDto {
 		this.likeList = board.getLikeList();
 		this.commentCount = board.getCommentList().size();
 		this.commentList = board.getCommentList();
+	}
+
+	public int getBoardNumber() {
+		return boardNumber;
 	}
 
 	public String getTitle() {
@@ -105,6 +101,10 @@ public class GetBoardResponseDto {
 
 	public List<Comment> getCommentList() {
 		return commentList;
+	}
+
+	public void setBoardNumber(int boardNumber) {
+		this.boardNumber = boardNumber;
 	}
 
 	public void setTitle(String title) {
@@ -153,13 +153,11 @@ public class GetBoardResponseDto {
 
 	@Override
 	public String toString() {
-		return "GetBoardResponseDto [boardNumber=" + boardNumber + ", title=" + title + ", content=" + content
+		return "PatchBoardResponseDto [boardNumber=" + boardNumber + ", title=" + title + ", content=" + content
 				+ ", boardImageUrl=" + boardImageUrl + ", writerEmail=" + writerEmail + ", writerProfileImageUrl="
 				+ writerProfileImageUrl + ", writerNickname=" + writerNickname + ", writeDate=" + writeDate
 				+ ", likeCount=" + likeCount + ", likeList=" + likeList + ", commentCount=" + commentCount
 				+ ", commentList=" + commentList + "]";
 	}
-	
-	
 
 }

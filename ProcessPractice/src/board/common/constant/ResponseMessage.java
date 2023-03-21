@@ -13,4 +13,5 @@ public interface ResponseMessage {
 
 	public static final String FAIL_SIGN_IN = "Sign in Failed";
 
+	public static final String NOT_PERMISSION = "Do Not Have Permission";
 }

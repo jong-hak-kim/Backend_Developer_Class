@@ -22,7 +22,7 @@ public class BoardRepository {
 			}
 		}
 
-		if (!isExist) { //존재하지 않는다면 보드 리스트에 추가
+		if (!isExist) { // 존재하지 않는다면 보드 리스트에 추가
 			boardTable.add(board);
 		}
 		return board;
@@ -41,6 +41,16 @@ public class BoardRepository {
 
 	public List<Board> findBy() {
 		return boardTable;
+	}
+
+	public void deleteByBoardNumber(int boardNumber) {
+		for (int index = 0; index < boardTable.size(); index++) {
+			Board board = boardTable.get(index);
+			if (board.getBoardNumber() == boardNumber) {
+				boardTable.remove(board);
+				break;
+			}
+		}
 	}
 
 }
