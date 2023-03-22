@@ -10,7 +10,6 @@ public class PostBoardDto {
 	}
 
 	public PostBoardDto(String title, String content, String boardImageUrl, String writerEmail) {
-		super();
 		this.title = title;
 		this.content = content;
 		this.boardImageUrl = boardImageUrl;

@@ -73,7 +73,7 @@ public class BoardController {
 		if (valid) {
 			System.out.println(HttpStatus.BAD_REQUEST);
 			return;
-		}
+		}	
 
 		ResponseDto<List<DeleteBoardResponseDto>> response = boardService.deleteBoard(boardNumber, email);
 		System.out.println(response.toString());

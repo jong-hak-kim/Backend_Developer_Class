@@ -17,7 +17,6 @@ public class User {
 
 	public User(String email, String password, String nickname, String phoneNumber, String address,
 			String addressDetail, String profileImageUrl) {
-		super();
 		this.email = email;
 		this.password = password;
 		this.nickname = nickname;
