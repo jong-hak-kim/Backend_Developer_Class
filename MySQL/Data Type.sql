@@ -21,7 +21,7 @@ CREATE TABLE Train (
 
 CREATE TABLE Station (
     station_number INT AUTO_INCREMENT PRIMARY KEY,
-    station_name VARCHAR(50) NOT NULL,
+    station_name VARCHAR(50) NOT NULL,	
     address TEXT NOT NULL UNIQUE,
     tel_number VARCHAR(15) NOT NULL UNIQUE
 );
