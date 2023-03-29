@@ -1,0 +1,107 @@
+순서도 3개 C언어 Java JavaScript
+자바는 완전 처음부터 작성
+C언어는 읽어보고 순서도에 비어있는 칸에 답 넣기
+JavaScript는 대부분 적어놓았다.
+
+
+
+서술형 총 5개
+객체지향언어의 특징 (간략하게 적어라)
+객체지향언어의 원칙 
+예외사항 3개 C언어 Java JavaScript (서술하는 형태) (코드 고치는 것도 연산자만 고치는 것)
+
+특정한 상황을 줌 (어떠한 시스템을 만드려고 하는데 그것의 주어진 조건에 따라서 코드를 짜라)
+(검색해서 써도됨)
+
+시험 시간 4시간
+
+프로그래밍 언어 활용
+프로그래밍 언어 응용
+각각 60점 이하는 재시험
+
+
+
+
+
+
+C언어 구조적 언어
+
+#include stdio.h
+
+int main(char* args) {
+	int numbers[5]; //배열 선언,  타입 배열이름[배열크기]
+	int age = 20;
+	int* number = *age; //age의 메모리 주소를 넣어줌
+	age = &number; //age에 number 주소에 대한 값이 들어감
+	for (int index = 0; index < 5; index++){ //for문 if문 자바와 동일
+	
+
+	}
+
+int numbers[5] = {1, 2, 3, 4, 5}; //배열 선언,  타입 배열이름[배열크기]
+
+	for (int index = 0; index < 5; index++){ //for문 if문 자바와 동일
+		number[index] = 10;
+	}
+}
+
+JavaScript
+
+컴파일 언어
+사람이 읽도록 만들어놓은 언어 -> 컴퓨터가 읽는 언어로 바꾸는 것
+
+컴파일 언어의 특징
+한번 실행하기 전에 모두 읽고 에러가 없으면 실행(자바에서 빨간줄 뜨는 것으로 에러를 줌)
+
+
+스크립트 언어(인터프리터 언어)
+한줄 읽고 실행
+컴파일이 없으므로 데이터 타입 따로 존재하지 않음
+반환 타입이 없음
+
+메소드를 정의할 때 function으로 정의
+function main(args) {
+
+	var variable;
+	let variable2;
+	const variable3 = 10; //상수
+	variable2 = true;
+	variable2 = 99;
+	variable2 = 3**3; //3의 3제곱
+	variable2 = "qwer"; (세미콜론 안찍어도 되고 데이터 타입이 없다)
+
+
+
+	const array = [1, 2, 3, 4, 5];
+	const object1 = { name : "종학", age: 10, address: "부산"}; //json 형태(네트워크 통신할 때 사용)	 //자바와 다르게 클래스를 더 만들 필요 없이 중괄호로 객체를 만들어낼 수 있다
+
+	console.log(object1.name);
+	console.log(object1.telname); //말이 안되지만 실행은 된다
+	console.log(object1) //주소값이 반환이 되지 않고 안의 내용들이 문자열로 나온다
+	const { name, age } = object1; //객체의 변수를 가져올 수 있다
+	const [ a, b, ...c ] = array; //a, b에 받고 나머지 애들을 c에 담아라
+
+	for (let index = 0; index < array.length; index++){ //*이런 for문 정도로 시험에 나올듯
+	}
+	
+}
+	    //매개변수
+const main = () => {
+
+
+}
+
+사칙연산할 때
+나누면 소수점까지 같이 들어간다
+
+문자열
+숫자
+논리형
+
+이렇게 존재
+
+
+
+
+
+

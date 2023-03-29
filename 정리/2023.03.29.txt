@@ -1,0 +1,45 @@
+CASE는
+IF() 삼항 연산자와 비슷
+IFNULL() NULL이면 첫 인자 값이 NULL이 아니면 첫 인자값 반환 널이면 두번째 인자값 반환
+NULLIF() 같으면 NULL 다르면 첫번째 인자 반환
+*이런 애가 있구나 하고 넘어가기
+
+LIKE문
+- 특정한 단어를 포함한 것을 검색할 때 사용
+%는 와일드카드 문자
+특정 패턴 포함하지 않는 데이터 검색 시 NOT LIKE 연산자 사용
+*와일드 카드
+% : 0개 이상의 문자 대체
+_ : 1개의 문자 대체
+ex) SELECT * FROM Reservation
+WHERE RoomNum LIKE '20__';
+2000 ~ 2099까지의 값을 검색
+
+** 자주 검색하는 것들은 인덱스를 만들어놓으면 검색 속도가 빨라진다
+** 검색을 자주 할것이라고 예상 되는 필드는 먼저 선언하는 것이 좋다
+** WHERE절을 사용 시 인덱스가 적혀있는 필드들을 먼저 적어주는 것이 더 빠르다
+
+FOREIGN KEY와 PRIMARY KEY는 테이블끼리 만든 후 키를 설정해준 후에 나중에 제약조건을 따로 설정해준다
+
+FOREIGN KEY 제약 조건을 설정 시 참조되는 테이블의 필드는 반드시 UNIQUE나 PRIMARY KEY 제약 조건이 설정되어 있어야 함
+주로 PRIMARY KEY로 설정 (UNIQUE는 NULL값이 들어올 수도 있기 때문이다)
+
+ex)
+ALTER TABLE Reservation
+ADD CONSTRAINT CustomerID
+FOREIGN KEY (ID)
+REFERENCES Customer (ID);
+
+A <- B
+B가 A를 참조하고 있을 때 A에 참조받는 데이터를 삭제를 하지 못한다.
+B에 있는 참조받은 것을 삭제하거나 NULL로 만들고 A에 있는 것을 삭제해야 삭제가 가능하다
+
+CASCADE
+참조되는 테이블에서 데이터 삭제 수정 -> 참조하는 테이블에서도 데이터 삭제 수정
+
+SET NULL
+참조되는 테이블에서 데이터 삭제 수정 -> 참조하는 테이블 데이터 NULL로 변경
+
+
+의존성이 높은 것이 CASCADE이다
+

@@ -1,0 +1,323 @@
+//UserApplication.java
+
+package user;
+
+import java.util.Scanner; // 스캐너 사용
+import user.controller.UserController; // UserController에 있는 signUp 메소드에 입력한 SignUpRequestDto의 값을 넣어주기 위하여 import
+import user.dto.request.user.SignUpRequestDto; //입력값을 Dto에 저장하기 위해 import
+
+public class UserApplication {
+	private static UserController userController = new UserController();
+
+	public static void main(String[] args) {
+		SignUpRequestDto signUpRequestDto = new SignUpRequestDto();
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("이름 : ");
+		signUpRequestDto.setName(scanner.nextLine());
+		System.out.print("성별 : ");
+		signUpRequestDto.setGender(scanner.nextLine());
+		System.out.print("주소 : ");
+		signUpRequestDto.setAddress(scanner.nextLine());
+		System.out.print("전화번호 : ");
+		signUpRequestDto.setPhoneNumber(scanner.nextLine());
+		System.out.print("마케팅 수신 여부 (Y / N) : ");
+		signUpRequestDto.setMarketingCheck(scanner.nextLine());
+		System.out.print("개인정보 수집 동의 여부 (Y / N) :");
+		signUpRequestDto.setCollectPersonalInfoCheck(scanner.nextLine());
+
+		userController.signUp(signUpRequestDto);
+
+	}
+}
+
+
+//SignUpRequestDto.java
+
+package user.dto.request.user;
+
+public class SignUpRequestDto {
+	private String name;
+	private String gender;
+	private String address;
+	private String phoneNumber;
+	private String marketingCheck;
+	private String collectPersonalInfoCheck;
+
+	public SignUpRequestDto() {
+	}
+
+	public SignUpRequestDto(String name, String gender, String address, String phoneNumber, String marketingCheck,
+			String collectPersonalInfoCheck) {
+		this.name = name;
+		this.gender = gender;
+		this.address = address;
+		this.phoneNumber = phoneNumber;
+		this.marketingCheck = marketingCheck;
+		this.collectPersonalInfoCheck = collectPersonalInfoCheck;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public String getMarketingCheck() {
+		return marketingCheck;
+	}
+
+	public String getCollectPersonalInfoCheck() {
+		return collectPersonalInfoCheck;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public void setMarketingCheck(String marketingCheck) {
+		this.marketingCheck = marketingCheck;
+	}
+
+	public void setCollectPersonalInfoCheck(String collectPersonalInfoCheck) {
+		this.collectPersonalInfoCheck = collectPersonalInfoCheck;
+	}
+
+	@Override
+	public String toString() {
+		return "SignUpRequestDto [name=" + name + ", gender=" + gender + ", address=" + address + ", phoneNumber="
+				+ phoneNumber + ", marketingCheck=" + marketingCheck + ", collectPersonalInfoCheck="
+				+ collectPersonalInfoCheck + "]";
+	}
+
+	public boolean validate() {
+		boolean result = this.name.isBlank() || this.gender.isBlank() || this.address.isBlank()
+				|| this.marketingCheck.isBlank() || this.collectPersonalInfoCheck.isBlank();
+		return result;
+	}
+
+}
+
+
+// UserController.java
+
+package user.controller;
+
+import user.dto.request.user.SignUpRequestDto; // 입력한 값을 이용하여 모두 입력하였는지 검증과 UserService에 값을 전달하기 위해 import
+import user.entity.User; // UserService에서 signUp() 메소드를 이용하여 리턴한 값이 User 타입이기 때문에 import
+import user.service.UserService; // UserService에 있는 signUp() 메소드를 이용하기 위하여 import
+
+public class UserController {
+	private UserService userService;
+
+	public UserController() {
+		userService = new UserService();
+	}
+	
+	public void signUp(SignUpRequestDto dto) {
+		if (dto.validate()) {
+			System.out.println("모두 입력해주세요.");
+			return;
+		}
+		User user = userService.signUp(dto);
+		System.out.println(user.toString());
+	}
+}
+
+
+// User.java
+
+package user.entity;
+
+import java.util.Date; // 현재 날짜를 얻기 위해 import
+import java.text.SimpleDateFormat; // Date를 통해 받은 현재 날짜의 형식을 원하는 대로 정하기 위하여 import
+import java.util.UUID; // userNumber에 UUID값을 주기 위하여 import
+
+import user.dto.request.user.SignUpRequestDto;
+
+public class User {
+	private String userNumber;
+	private String name;
+	private String gender;
+	private String date;
+	private String address;
+	private String phoneNumber;
+	private boolean marketingCheck;
+	private boolean collectPersonalInfoCheck;
+
+	public User() {
+	}
+
+	public User(String userNumber, String name, String gender, String date, String address, String phoneNumber,
+			boolean marketingCheck, boolean collectPersonalInfoCheck) {
+		this.userNumber = userNumber;
+		this.name = name;
+		this.gender = gender;
+		this.date = date;
+		this.address = address;
+		this.phoneNumber = phoneNumber;
+		this.marketingCheck = marketingCheck;
+		this.collectPersonalInfoCheck = collectPersonalInfoCheck;
+	}
+
+	public User(SignUpRequestDto dto) {
+		Date now = new Date();
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy. MM. dd");
+		this.userNumber = UUID.randomUUID().toString();
+		this.name = dto.getName();
+		this.gender = dto.getGender();
+		this.date = simpleDateFormat.format(now);
+		this.address = dto.getAddress();
+		this.phoneNumber = dto.getPhoneNumber();
+	}
+
+	public String getUserNumber() {
+		return userNumber;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public boolean isMarketingCheck() {
+		return marketingCheck;
+	}
+
+	public boolean isCollectPersonalInfoCheck() {
+		return collectPersonalInfoCheck;
+	}
+
+	public void setUserNumber(String userNumber) {
+		this.userNumber = userNumber;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public void setMarketingCheck(boolean marketingCheck) {
+		this.marketingCheck = marketingCheck;
+	}
+
+	public void setCollectPersonalInfoCheck(boolean collectPersonalInfoCheck) {
+		this.collectPersonalInfoCheck = collectPersonalInfoCheck;
+	}
+
+	@Override
+	public String toString() {
+		return "User [userNumber=" + userNumber + ", name=" + name + ", gender=" + gender + ", date=" + date
+				+ ", address=" + address + ", phoneNumber=" + phoneNumber + ", marketingCheck=" + marketingCheck
+				+ ", collectPersonalInfoCheck=" + collectPersonalInfoCheck + "]";
+	}
+
+}
+
+
+// UserService.java
+
+package user.service;
+
+import user.dto.request.user.SignUpRequestDto; //유저에게서 받은 입력값을 전달해주기 위하여 import
+import user.entity.User; //User 클래스에 있는 getset을 이용하여 값을 넣어주거나 userRepository에 값을 전달해주기 위해 import
+import user.repository.UserRepository; //UserRepository에 있는 save() 메소드를 사용하기 위하여 import
+
+public class UserService {
+	private static UserRepository userRepository;
+
+	public UserService() {
+		userRepository = new UserRepository();
+	}
+
+	public User signUp(SignUpRequestDto dto) {
+
+		User user = new User(dto);
+		if (dto.getMarketingCheck().equals("N")) {
+			user.setMarketingCheck(false);
+		}
+		if (dto.getMarketingCheck().equals("Y")) {
+			user.setMarketingCheck(true);
+		}
+		if (dto.getCollectPersonalInfoCheck().equals("N")) {
+			user.setCollectPersonalInfoCheck(false);
+		}
+		if (dto.getCollectPersonalInfoCheck().equals("Y")) {
+			user.setCollectPersonalInfoCheck(true);
+		}
+		
+		userRepository.save(user);
+		return user;
+
+	}
+}
+
+
+//UserRepository.java
+
+package user.repository;
+
+import java.util.ArrayList; //User의 각각의 값들을 넣을 리스트의 크기를 알 수 없기 때문에 ArrayList를 이용하여 값이 들어가면 리스트의 크기가 늘어나도록 하기 위하여 import
+import java.util.List; //ArrayList를 사용하기 위하여 import
+import user.entity.User; // 입력받은 User 타입들인 값들을 받아서 userTable에 넣기 위하여 import
+
+public class UserRepository {
+	private static List<User> userTable = new ArrayList<>();
+
+	public User save(User user) {
+		userTable.add(user);
+		return user;
+
+	}
+}
