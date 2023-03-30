@@ -31,6 +31,7 @@ CREATE TABLE Station (
     tel_number VARCHAR(15) NOT NULL UNIQUE
 );
 
+# Train과 Station은 N:M 관계
 CREATE TABLE STOP_STATION(
 	station_number INT NOT NULL,
     train_number VARCHAR(10) NOT NULL,
