@@ -37,3 +37,18 @@ SELECT 구분, 세대수, 인구수 FROM Namgu WHERE 통 >= 20 OR 반 <= 100;
 SELECT * FROM Namgu WHERE 인구수 >= 10000 AND (18세이상인구수 <= 12000 OR 반 >= 100);
 
 SELECT * FROM Namgu WHERE 인구수 >= 10000 AND 18세이상인구수 <= 12000 OR 반 >= 100;
+
+SELECT count(면적), max(세대수), min(세대수)
+FROM Namgu
+WHERE 면적 = 1;
+
+SELECT 면적, count(*), max(세대수), min(세대수)
+FROM Namgu
+GROUP BY 면적; #면적을 그룹지어서 각 면적별 필드 수, 최대 세대수, 최소 세대수를 보여줌
+
+# GROUP BY에 적용되지 않은 필드는 HAVING에 사용할 수 없다
+SELECT 면적, count(*), max(세대수), min(세대수)
+FROM Namgu
+GROUP BY 면적
+HAVING max(세대수) >= 5000 
+ORDER BY 면적;
