@@ -1,0 +1,37 @@
+내일 9시 ~ 11시 시험 예상
+
+* 정규화
+
+유저 (이메일 주소, 비밀번호, 비밀번호 확인, 닉네임, 휴대전화 번호, 주소, 상세 주소, 개인정보처리 동의, 프로필 사진)
+
+User (email, password (패스워드에는 암호화된 데이터 들어가므로 글자 수 길게 정해줘야 된다), nickname, tel_number, address, address_detail, consent_personal_information, profile_url)
+
+게시물 (게시물번호, 게시물 사진, 작성자 이메일, 작성 날짜, 제목, 내용, 조회수)
+
+Board (board_number, writer_email, title, content, board_image_url write_datetime, view_count)
+
+검색 로그 (로그시퀀스, 검색어, 관련 검색어)
+
+Search_Log (log_sequence, search_word, related_search_word)
+
+좋아요 리스트 (유저 이메일, 게시물 번호)
+
+댓글 리스트 (댓글 번호, 유저 이메일, 게시물 번호, 작성 시간, 댓글 내용)
+
+Comment (comment_number, user_email, board_number, comment_content, write_datetime)
+
+1. 중복을 허용할 거냐 안 할거냐 판단 (정규화 여부)
+- 업데이트가 자주 일어나는 것이면 조인을 하는 것이 좋다
+조인 대신 뷰를 활용해주는 방법도 있다 (속도는 증가하지 않지만 신뢰성을 유지할 수 있고 쿼리를 다시 한번 짤 필요가 없어진다)
+
+* 테이블에 PK를 두 개 지정해놨을 경우 문제점
+ex) Comment 테이블
+User_email, board_number가 PK일 경우
+게시물에 유저가 댓글을 작성하였을 때 PK의 특징으로 댓글 한 번 작성 후에 그 이후로는 작성을 못한다
+그러므로 두 개 다 PK와 UNIQUE 제약조건을 없애고
+하나의 시퀀스를 하나 더 만들어주어서 해결
+
+- DCL
+
+GRANT OPTION
+- 자신이 가지고 있는 옵션에 대한 권한 부여 권한이 부여

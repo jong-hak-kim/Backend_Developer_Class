@@ -1,0 +1,21 @@
+유저 (이메일 주소, 비밀번호, 비밀번호 확인, 닉네임, 휴대전화 번호, 주소, 상세 주소, 개인정보처리 동의, 프로필 사진)
+
+User (email, password
+* 패스워드에는 암호화된 데이터 들어가므로 글자 수 길게 정해줘야 된다
+* INSERT 할 때 암호화 예시
+ex) sha2('P!ssw0rd', 512)
+, nickname, tel_number, address, address_detail, consent_personal_information, profile_url)
+
+게시물 (게시물번호, 게시물 사진, 작성자 이메일, 작성 날짜, 제목, 내용, 조회수)
+
+Board (board_number, writer_email, title, content, board_image_url write_datetime, view_count)
+
+검색 로그 (로그시퀀스, 검색어, 관련 검색어)
+
+Search_Log (log_sequence, search_word, related_search_word)
+
+좋아요 리스트 (유저 이메일, 게시물 번호)
+
+댓글 리스트 (댓글 번호, 유저 이메일, 게시물 번호, 작성 시간, 댓글 내용)
+
+Comment (comment_number, user_email, board_number, comment_content, write_datetime)
