@@ -1,0 +1,2 @@
+USE HOTEL;
+SELECT * FROM Custom;

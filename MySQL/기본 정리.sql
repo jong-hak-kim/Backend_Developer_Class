@@ -447,3 +447,30 @@ ON Namgu (세대수, 인구수, 통); # 여러 개의 필드를 인덱스로 정
 CREATE UNIQUE INDEX saedaesu_unique_index
 ON Namgu (세대수);
 
+------------------------------------------
+
+# DCL
+# Data Control Language
+# 권한 제어 및 트랜잭션 제어를 담당하는 쿼리문의 집합
+
+# 사용자 권한
+# 계정 생성
+CREATE USER 'Developer_user'@'%' IDENTIFIED BY 'P!ssw0rd';
+
+# GRANT
+# 사용자에게 권한을 부여하는 쿼리문
+# GRANT 권한1, ... ON 데이터베이스.테이블 TO 사용자이름@호스트;
+GRANT CREATE, INSERT, UPDATE, SELECT, DELETE
+ON HOTEL.* TO 'Developer_user'@'%';
+
+# REVOKE
+# 사용자로부터 권한을 회수하는 쿼리문
+# REVOKE 권한1, ... ON 데이터베이스.테이블 FROM 사용자이름@호스트;
+REVOKE CREATE ON HOTEL.* FROM 'Developer_user'@'%';
+
+# COMMIT
+# 트랜잭션을 영구적으로 반영하는 쿼리문
+
+# ROLLBACK
+# 트랜잭션을 취소하고 되돌려놓는 쿼리문
+
