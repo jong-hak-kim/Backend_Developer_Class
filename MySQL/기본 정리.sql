@@ -473,4 +473,3 @@ REVOKE CREATE ON HOTEL.* FROM 'Developer_user'@'%';
 
 # ROLLBACK
 # 트랜잭션을 취소하고 되돌려놓는 쿼리문
-
