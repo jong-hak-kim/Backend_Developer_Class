@@ -52,7 +52,7 @@ INSERT INTO Employee VALUES ('2023010101', 'John Doe', '1980-11-12','010-9184-65
 INSERT INTO Annual_Income VALUES ('DEV', 'PO1', 38000000);
 
 #6
-SELECT D.department_code, D.department_name, E.employee_name, E.employee_tel_number FROM Department D JOIN Employee E WHERE D.department_code = 'DEV';
+SELECT D.department_code, D.department_name, E.employee_name, E.employee_tel_number FROM Department D JOIN Employee E ON D.department_code = E.department_code WHERE D.department_code = 'DEV';
 
 #7
 INSERT INTO Employee VALUES ('2023010102', 'raynor seo', '1993-06-02','010-4736-1346', '부산광역시 서구', 'DEV', 'PO1');
