@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List / Table</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      thead {
+        background-color: black;
+        color: white;
+      }
+      tfoot {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Ordered List -->
+    <!-- 순서가 있는 리스트 -->
+    <!-- 리스트의 아이템을 지정할 땐 <li></li> 요소 사용 -->
+    <!-- 순서가 있는 리스트를 사용하면 첫 아이템이 숫자 1부터 -->
+    <!-- 번호가 자동 지정됨 -->
+    <ol>
+      <li>자바</li>
+      <li>MySQL</li>
+      <li>HTML</li>
+    </ol>
+    <!-- type 속성 -->
+    <!-- type 속성을 사용하면 숫자(1), 영어 대소문자(a, A), 로마 숫자 대소문자(i, I)로 표기 가능 -->
+    <!-- start 속성 -->
+    <!-- start 속성을 사용하면 지정한 위치부터 순서대로 표기 가능 -->
+    <ol type="I" start="5">
+      <li>자바</li>
+      <li>MySQL</li>
+      <li>HTML</li>
+    </ol>
+    <!-- Unordered List -->
+    <!-- 순서가 없는 리스트 -->
+    <!-- 순서가 없는 리스트를 사용하면 ●, ■ 이 붙어셔 표기 됨 -->
+    <ul>
+      <li>자바</li>
+      <li>MySQL</li>
+      <li>HTML</li>
+    </ul>
+    <!-- Table -->
+    <!-- 행과 열로 구성되어있는 데이터 집합 표시 -->
+    <!-- <table></table> 태그로 테이블임을 명시 -->
+    <!-- <tr></tr> 태그로 하나의 행을 명시 -->
+    <!-- <td></td> 태그로 행의 열을 명시 -->
+    <table>
+      <tr>
+        <td>JAVA 프로그래밍</td>
+        <td>프로그래밍 언어 활용</td>
+      </tr>
+      <tr>
+        <td>JAVA 프로그래밍</td>
+        <td>프로그래밍 언어 응용</td>
+      </tr>
+    </table>
+    <br />
+    <!-- <thead>, <tbody>, <tfoot> -->
+    <!-- 테이블을 헤드, 바디, 풋으로 구조화를 시켜주는 요소 -->
+    <table>
+      <thead>
+        <tr>
+          <th>교육</th>
+          <th>능력단위명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>JAVA 프로그래밍</td>
+          <td>프로그래밍 언어 활용</td>
+        </tr>
+        <tr>
+          <td>JAVA 프로그래밍</td>
+          <td>프로그래밍 언어 응용</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>2개</td>
+          <td>2개</td>
+        </tr>
+      </tfoot>
+    </table>
+    <br />
+
+    <!-- colspan / rowspan -->
+    <!-- 행의 사이즈를 오른쪽으로 지정한 값만큼 증가시키는 속성 -->
+    <!-- 열의 사이즈를 아래쪽으로 지정한 값만큼 증가시키는 속성 -->
+
+    <table>
+      <thead>
+        <tr>
+          <th>교육</th>
+          <th colspan="2">능력단위명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">JAVA 프로그래밍</td>
+          <td rowspan="2">프로그래밍 언어</td>
+          <td>활용</td>
+        </tr>
+        <tr>
+          <td>응용</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>2개</td>
+          <td colspan="2">2개</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
