@@ -1,0 +1,12 @@
+<input 태그>
+text
+password
+text & password 속성
+size - 화면에 몇글자가 보이도록 할 것인지 지정
+value - 텍스트 필드 부분에 보이는 기본 값 지정
+maxlength - 입력할 수 있는 최대 문자 수 지정
+
+checkbox - 0개 이상 선택 가능한 체크 박스
+radio - 1개만 선택해야하는 체크 박스
+file - 파일 첨부 버튼
+hidden - 사용자에게 보이지 않는 input 창
