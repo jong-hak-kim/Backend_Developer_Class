@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input</title>
+  </head>
+  <body>
+    <!-- ! Input 요소의 type 속성 -->
+    <!-- * text, password type -->
+    <!-- * text와 password type에서 자주 쓰이는 추가 속성 -->
+    <!-- # TODO size : input box의 사이즈 지정 -->
+    <!-- # maxLength : input의 최대 글자 수 지정 -->
+    <!-- # value : input의 기본값을 지정 -->
+    <!-- # value 값은 maxlength에 영향을 받지 않는다 -->
+    <input type="text" size="5" maxlength="3" value="1234" />
+    <input type="password" />
+    <br />
+    <!-- @ search, url, email, tel type -->
+    <input type="search" />
+    <input type="url" />
+    <input type="email" />
+    <input type="tel" />
+    <button type="submit">submit</button>
+    <br />
+
+    <!-- ! checkbox, radio type -->
+    <!-- * checkbox : 0개 이상 선택할 때 사용 -->
+    <!-- * radio : 1개만 선택할 때 사용 -->
+
+    <!-- # value : checkbox나 radio의 값을 지정 -->
+    <!-- # name : form 제출 시 해당 name으로 value를 전송 -->
+    <!-- # radio의 경우 name으로 그룹화 -->
+    <!-- # checked : 기본적으로 선택 -->
+
+    <form>
+      <input type="checkbox" />
+      <input type="radio" />
+    </form>
+    <form>
+      <fieldset>
+        <!-- # checkbox는 모두 다 checked를 하면 전부 다 체크가 된다 -->
+        <legend>Checkbox</legend>
+        <input type="checkbox" name="check_group" value="1" checked /><label
+          >1</label
+        >
+        <input type="checkbox" name="check_group" value="2" checked /><label
+          >2</label
+        >
+        <input type="checkbox" name="check_group" value="3" checked /><label
+          >3</label
+        >
+      </fieldset>
+      <fieldset>
+        <!-- # radio는 모두 checked를 하면 맨 마지막 항목만 체크가 된다 -->
+        <legend>Radio</legend>
+        <input type="radio" name="radio_group" value="1" checked /><label
+          >1</label
+        >
+        <input type="radio" name="radio_group" value="2" checked /><label
+          >2</label
+        >
+        <input type="radio" name="radio_group" value="3" checked /><label
+          >3</label
+        >
+      </fieldset>
+      <!-- ! Select -->
+      <!-- * 주어진 옵션 중에서 특정한 하나 혹은 그 이상을 선택 -->
+      <!-- * option 요소로 선택할 수 있는 옵션을 지정 -->
+
+      <fieldset>
+        <legend>Select</legend>
+
+        <!-- @     select 요소에 작성     -->
+        <!-- # name : form 제출 시 해당 name으로 value를 전송 -->
+        <!-- # multiple : 해당 select를 여러 개의 option 선택을 가능하게 함 -->
+        <!-- # size : 한 번에 보여지는 option의 개수를 지정 -->
+        <!-- # optgroup으로 옵션들을 그룹화 가능 -->
+        <!-- # label 사용 가능 -->
+        <!--  -->
+        <!-- @     option 요소에 작성     -->
+        <!-- # value : option의 값을 지정, option 요소에 작성 -->
+        <!-- # selected : 해당 option을 선택된 상태로 지정 -->
+        <!-- # disable로 선택하지 못하는 상태로 지정 가능 -->
+        <select name="fruits" multiple size="2">
+          <optgroup label="과일">
+            <option value="apple">사과</option>
+            <option value="banana">바나나</option>
+          </optgroup>
+          <optgroup label="기타 음식">
+            <option value="caroot" selected>당근</option>
+            <option value="donut" disabled>도넛</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      <button type="submit">제출</button>
+    </form>
+    <br />
+
+    <!-- @ number, range 속성 -->
+    <!-- * 숫자를 다루는 속성 -->
+    <!-- * number은 직접 입력하거나 스핀으로 조작 -->
+    <!-- * range는 드래그로 조작 -->
+
+    <!-- # min : 최소값 지정 -->
+    <!-- # max : 최대값 지정 -->
+    <!-- # step : 증감량 지정 -->
+    <!-- # value : 기본값 지정 -->
+    <form>
+      <input type="number" name="number" min="0" max="10" step="2" value="2" />
+      <input type="range" name="range" min="-10" max="10" step="2" value="0" />
+      <button type="submit">제출</button>
+    </form>
+
+    <!-- ! file, hidden type -->
+    <!-- * file 타입은 파일을 입력할 때 사용 -->
+    <!-- * hidden 타입은 화면에 보여주지 않고자 할 때 사용 -->
+    <!-- # hidden 타입에서 사용자가 아예 못 보는 input이기 때문에 기본 값은 무조건 포함되야 한다 -->
+    <form enctype="multipart/form-data">
+      <input type="file" name="file" />
+      <input type="hidden" name="hidden" value="hidden-value" />
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>

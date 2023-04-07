@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- Form 요소 -->
+    <!-- 사용자로부터 입력을 받아 특정한 리소스로 요청을 보낼 때 -->
+    <!-- 사용되는 요소 -->
+    <form>
+      <input name="id" />
+      <input name="password" />
+      <button type="submit">로그인</button>
+    </form>
+    <br />
+    <!-- Form 속성 -->
+    <!-- action 속성 / method 속성 -->
+    <!-- action : Form을 제출할 때 어떠한 리소스로 제출할 것인지 -->
+    <!-- method : Form을 제출할 때 어떠한 방식(GET, POST)으로 제출할 것인지 -->
+    <!-- GET 방식 : 데이터를 URL에 담아서 전송 -> Request Header의 URL에 담겨서 전송 -->
+    <!-- POST 방식 : 데이터를 숨겨서 전송 -> Request Body에 담겨서 전송 -->
+    <form action="http://naver.com" method="GET">
+      <input name="data" />
+      <button type="submit">GET 전송</button>
+    </form>
+    <form action="http://naver.com" method="POST">
+      <input name="data" />
+      <button type="submit">POST 전송</button>
+    </form>
+    <br />
+    <!-- Form Button -->
+    <form>
+      <input name="first" />
+      <input name="second" />
+      <!-- submit : form을 action의 method 방식으로 요청을 보내는 형식 -->
+      <button type="submit">제출</button>
+      <!-- input으로 submit 형식을 사용 할 수 있으나 쓰지 않는다 -->
+      <input type="submit" value="인풋 제출" />
+      <!-- reset : form의 input value들을 초기값으로 변경 -->
+      <button type="reset">초기화</button>
+      <input type="reset" value="인풋 초기화" />
+    </form>
+    <br />
+    <!-- Field Set / Legend 요소 -->
+    <!-- form의 field들을 그룹화 지어주는 요소 -->
+    <!-- Label 요소 -->
+    <!-- form의 요소에 라벨을 달아주는 요소 -->
+    <!-- label 요소의 for속성에 form의 요소와 id 속성 값을 -->
+    <!-- 지정하면 해당 label 요소와 form의 요소가 연결 -->
+    <form>
+      <fieldset>
+        <legend>예약 정보</legend>
+        <!-- 이름 달아놓는 것과 비슷하다 -->
+        <label for="reservation_input">예약일</label>
+        <input type="date" id="reservation_input" />
+      </fieldset>
+      <fieldset>
+        <legend>예약자 정보</legend>
+        <input />
+        <input />
+      </fieldset>
+    </form>
+  </body>
+</html>

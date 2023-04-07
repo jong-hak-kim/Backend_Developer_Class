@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+    <script>
+      function onButtonHandler() {
+        console.log("로그 기록");
+        location.href = "http://naver.com";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- @ Button 요소 -->
+    <!-- * 사용자의 클릭 이벤트를 인식 -->
+    <!-- # submit, reset, button(기본값) -->
+    <!-- # button 요소의 경우 Javascript와 -->
+    <!-- # 연결해야 의미가 있음 -->
+    <button type="button" onclick="onButtonHandler()">버튼</button>
+  </body>
+</html>
