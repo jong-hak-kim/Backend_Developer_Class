@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .span-1 {
+        display: block;
+        background-color: aqua;
+        width: 100px;
+        height: 100px;
+        /* 테두리 : 픽셀 스타일 색상 */
+        border: 5px solid black;
+        /* padding(테두리)와 네모 사이의 공간 */
+        padding: 10px;
+        /* 요소와 요소 사이의 거리 */
+        margin: 10px;
+      }
+      .span-2 {
+        display: block;
+        background-color: blueviolet;
+        width: 100px;
+        height: 100px;
+      }
+      .div-1 {
+        /* inline : 글자 수만큼만 공간 차지 */
+        display: inline;
+      }
+      .div-2 {
+        /* block : 한 줄 전체 공간 차지 */
+        display: block;
+      }
+      .div-3 {
+        background-color: gray;
+        /* flex : 요소 자유자재로 위치 */
+        display: flex;
+        height: 300px;
+
+        /* flex-direction: column; => flex의 쌓이는 방향에 대하여 수평에서 수직으로 변경 */
+        flex-direction: column;
+        /* flex-direction: row-reverse; => flex의 쌓이는 방향에 대하여 수평에서 반대 방향으로 변경 */
+        flex-direction: row-reverse;
+        /* 요소 정렬 */
+        align-items: center;
+
+        /* space-around : 동일한 마진으로 나열 */
+        /* space-between : 요소들 사이만 동일한 마진으로 나열 */
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="span-1">Content</span>
+    <span class="span-2">Content</span>
+
+    <div class="div-1">Content</div>
+    <div class="div-2">Content</div>
+    <div class="div-3">
+      <span class="span-1" style="flex: 1">1</span>
+      <span class="span-1" style="flex: 1">2</span>
+      <span class="span-1" style="flex: 1">3</span>
+      <span class="span-1" style="flex: 1">4</span>
+    </div>
+  </body>
+</html>

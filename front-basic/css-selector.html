@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Selector</title>
+    <style>
+      /* CSS 선택자 */
+      /* 스타일 속성을 적용할 대상을 선택하는 것 */
+      /* 전체 선택자 (*) */
+      /* 모든 HTML 요소에 대해서 해당 스타일 시트를 적용하기 위한 선택자 (*) */
+      * {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+      /* 타입 선택자 */
+      /* 특정한 요소에 대해 스타일을 적용하기 위한 선택자 (요소명) */
+      h1 {
+        color: #ff0000;
+      }
+      h2 {
+        color: #00ff00;
+      }
+      p {
+        color: #0000ff;
+      }
+
+      /* 클래스 선택자 */
+      /* 특정 클래스에 대한 스타일을 적용하기 위한 선택자 (.클래스명) */
+      .title {
+        /* !important로 우선 순위 지정 */
+        font-size: 20px !important;
+        font-weight: 700;
+      }
+      .sub-title {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      /* 아이디 선택자 */
+      /* 특정 아이디에 대한 스타일을 적용하기 위한 선택자 (#아이디명) */
+      #h1-sub-title-1 {
+        color: #000000;
+      }
+
+      /* 그룹 선택자 */
+      /* 같은 스타일을 사용하는 선택자들을 나열하는 방법 (,) */
+      .class-1,
+      .class-2,
+      .class-3,
+      .class-4 {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      /* 굉장히 안 좋은 방법 */
+      /* 자손 선택자 */
+      /* 특정 자손들에 대해서 스타일을 적용하기 위한 선택자 ( ) */
+      /* html에 종속되기 때문에 사용을 지양 */
+      div h1 {
+        color: #000000;
+      }
+
+      .div-h1 {
+        color: #ff00ff;
+        font-size: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- 아이디를 중복해서 지정했을 경우 나중에 자바스크립트를 지정할 때 원하는 값을 없을 수도 있다 -->
+      <!-- 띄어쓰기로 클래스를 중첩해서 사용할 수 있다 -->
+      <!-- 중첩되는 css 항목이 있을 경우 뒤에 있는 클래스 css로 덮어씌워진다 -->
+      <div class="div-h1">
+        <h1 class="title">H1 제목 태그입니다.</h1>
+        <h1 class="sub-title">H1 부제목 태그입니다.</h1>
+      </div>
+    </div>
+    <h1 class="title">H1 제목 태그입니다.</h1>
+    <h1 id="h1-sub-title-1" class="sub-title">H1 부제목 태그입니다.</h1>
+
+    <h2 class="title">H2 제목 태그입니다.</h2>
+    <h2 class="sub-title">H2 부제목 태그입니다.</h2>
+
+    <h2 class="title">H2 제목 태그입니다.</h2>
+    <h2 class="sub-title">H2 부제목 태그입니다.</h2>
+
+    <p class="class-1">P 태그입니다.</p>
+    <p class="class-2">P 태그입니다.</p>
+    <p class="class-3">P 태그입니다.</p>
+    <p class="class-4">P 태그입니다.</p>
+  </body>
+</html>
