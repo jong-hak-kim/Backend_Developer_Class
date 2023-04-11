@@ -1,0 +1,169 @@
+<!-- 1. 어떻게 공간을 나눌지 결정하고 만들기 -->
+<!-- 2. 헤더부터 순서대로 작성 -->
+<!-- * 정렬하는 방법 -->
+<!-- * 1. text-align (텍스트만 정렬) -->
+<!-- * 2. flex -->
+<!-- * 3. margin: 0 auto; -->
+<!-- # margin 뒤에는 값이 4개까지 올 수 있다 값이 몇 개 인지에 따라 각 항목 적용 요소가 다르다 -->
+<!-- # 1개 값 모든 방향 -->
+<!-- # 2개 값 (세로, 가로) -->
+<!-- # 3개 값 (위, 가로, 아래) -->
+<!-- # 4개 값 (위, 오른쪽, 아래, 왼쪽) => 위를 기준으로 시계 방향 -->
+<!-- # 값을 각 방향마다 직접적으로 지정해줄 수도 있다 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>네이버 : 로그인</title>
+    <link rel="stylesheet" href="./naver-sign-in.css" />
+  </head>
+  <body>
+    <!--! Header -->
+    <div class="header">
+      <div class="header-inner">
+        <a href="https://naver.com" class="logo">
+          <h1 class="blind">NAVER</h1>
+        </a>
+        <div class="lang">
+          <select class="select">
+            <option>한국어</option>
+            <option>English</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!--! Main -->
+    <div class="main">
+      <div class="content">
+        <!-- @ 로그인 wrapper -->
+        <div class="sign-in-wrapper">
+          <form action="https://nid.naver.com/nidlogin.login" method="POST">
+            <ul class="panel-wrapper">
+              <li class="panel-item">
+                <div class="panel-inner">
+                  <!-- * ID Password wrapper -->
+                  <div class="id-password-wrapper">
+                    <div class="input-row">
+                      <div class="icon-cell">
+                        <span class="icon-id"
+                          ><span class="blind">아이디</span></span
+                        >
+                      </div>
+                      <input
+                        type="text"
+                        class="input-text"
+                        maxlength="41"
+                        placeholder="아이디"
+                        name="id"
+                        id="id"
+                      />
+                    </div>
+                    <div class="input-row">
+                      <div class="icon-cell">
+                        <span class="icon-pw">
+                          <span class="blind">비밀번호</span>
+                        </span>
+                      </div>
+                      <input
+                        type="password"
+                        class="input-text"
+                        maxlength="16"
+                        placeholder="비밀번호"
+                        name="pw"
+                        id="pw"
+                      />
+                    </div>
+                  </div>
+                  <!-- * Sing In Keep wrapper -->
+                  <div class="sign-in-keep-wrapper">
+                    <div class="keep-check">
+                      <input type="checkbox" class="input-keep" value="off" />
+                      <label class="keep-text">로그인 상태 유지</label>
+                    </div>
+                    <div class="ip-check"></div>
+                  </div>
+                  <!-- * Sign In Button wrapper -->
+                  <div class="sign-in-button-wrapper">
+                    <button type="submit" class="sign-in-button">
+                      <span class="button-text">로그인</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <!-- @ 페이지 이동 네비게이션 -->
+        <ul class="find-wrapper">
+          <li>
+            <a
+              class="find-text"
+              href="https://nid.naver.com/user2/api/route?m=routePwInquiry&lang=ko_KR"
+              >비밀번호 찾기</a
+            >
+          </li>
+          <li>
+            <a
+              class="find-text"
+              href="https://nid.naver.com/user2/api/route?m=routeIdInquiry&lang=ko_KR"
+              >아이디 찾기</a
+            >
+          </li>
+          <li>
+            <a
+              class="find-text"
+              href="https://nid.naver.com/user2/V2Join?m=agree&lang=ko_KR"
+              >회원가입</a
+            >
+          </li>
+        </ul>
+        <!-- @ 광고 배너 -->
+        <div class="banner-wrapper">
+          <div class="banner-content">
+            <img
+              class="banner-image"
+              src="https://ssl.pstatic.net/melona/libs/1378/1378592/12ac0aee177c4a9f226f_20230405154307970.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--! Footer -->
+    <div class="footer">
+      <div class="footer-inner">
+        <ul class="footer-link">
+          <li>
+            <a class="footer-item"><span class="text">이용약관</span></a>
+          </li>
+          <li>
+            <a class="footer-item"
+              ><span class="text"><strong>개인정보처리방침</strong></span></a
+            >
+          </li>
+          <li>
+            <a class="footer-item"
+              ><span class="text">책임의 한계와 법적고지</span></a
+            >
+          </li>
+          <li>
+            <a class="footer-item"
+              ><span class="text">회원정보 고객센터</span></a
+            >
+          </li>
+        </ul>
+        <div class="footer-copy">
+          <a herf="https://www.navercorp.com"
+            ><span class="footer-logo">
+              <span class="blind">네이버</span>
+            </span></a
+          >
+          <span class="text">Copylight</span>
+          <span class="copy">© NAVER Corp.</span>
+          <span class="text">All Rights Reserved.</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
