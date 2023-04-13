@@ -1,0 +1,41 @@
+* 리액트
+* 같은 경로에 tsconfig.json이 있는지 확인 후 지워줘야 한다!
+npx 노트 패키지를 실행시켜주어 압축을 풀고 template 언어를 typescript로 쓰겠다, 이름을 example_react로 하겠다
+npx create-react-app example_react --template typescript
+
+위 코드 입력하면 폴더가 만들어짐
+
+node_modules : node npm 상에 존재하는 외부 패키지를 모아두는 공간
+(자바의 jre와 동일)
+
+public : index.html에서 <head>파트만 건드림
+
+.gitignore : node_modules 등 git에 올리지 말아야할 파일을 설정
+
+package.json : 패키지에 대한 설명들이 정의되어 있다
+
+node_modules를 삭제했을 때
+경로를 react 프로젝트 경로로 지정
+
+npm install --force
+--force 충돌하면 강제로 만들어라
+
+
+리액트 작업은 src에서 한다
+App.css
+App.tex
+index.css
+index.tsx
+사용
+
+실행
+npm run start
+=> package.json에 있는 스크립트에 있는 start를 사용하겠다
+
+npm install --save typescript
+npm install --save @types/node
+npm install --save @types/react
+npm install --save @types/react-dom
+npm install --save @types/jest
+
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
