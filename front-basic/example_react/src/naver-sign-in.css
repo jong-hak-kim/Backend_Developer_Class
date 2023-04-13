@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+}
+body {
+  height: 100%;
+  position: relative;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+}
+li {
+  margin: 0;
+  padding: 0;
+}
+input {
+  border-radius: 0;
+  border: none;
+  background: 0 0;
+  outline: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.header {
+  padding-bottom: 48px;
+}
+
+.header-inner {
+  position: relative;
+  width: 743px;
+  margin: 0 auto;
+  padding-top: 108px;
+  text-align: center;
+}
+.logo {
+  display: inline-block;
+  background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_00_common_978240a6.png);
+  background-size: 244px 107px;
+  background-position: 0 -51px;
+  /*background-repeat : 배경 반복 안 되게 하기 */
+  background-repeat: no-repeat;
+  width: 155px;
+  height: 30px;
+}
+.blind {
+  /* absolute 절대적인 위치 */
+  /* 원래라면 위쪽부터 요소들이 쌓이지만 absolute로 하면 요소가 한 곳에 절대적으로 있게 된다 */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  /* overflow : 이미지나 글자가 영역을 벗어났을 때 어떻게 처리할 건지 정하는 속성 */
+  overflow: hidden;
+}
+.lang {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
+.select {
+  position: relative;
+  font-size: 12px;
+  font-weight: 400;
+  /* line-height : 글과 글 사이의 여백 크기 */
+  line-height: 18px;
+  width: 100%;
+  /* min-width: 반응형일 때 창을 줄일 때의 최소 너비 */
+  min-width: 95px;
+  height: 30px;
+  /* 상 우 하 좌 */
+  padding: 4px 10px 6px 8px;
+  color: #333333;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  /* 커서 설정 */
+  cursor: pointer;
+  /* z-index : 쌓이는 형태에서 층수 */
+  z-index: 1;
+}
+
+.sign-in-wrapper {
+  background-color: burlywood;
+  width: 460px;
+  /* margin: 0 auto 좌우 여백을 동일하게 주기 */
+  margin: 0 auto;
+}
+
+.panel-wrapper {
+  position: relative;
+  z-index: 3;
+  /* margin 위쪽을 -8px 겹치도록하여 경계가 부드럽게 한다 */
+  margin-top: -8px;
+}
+
+.panel-item {
+  border: 1px solid #c6c6c6;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 5px 8px 0 rgba(68, 68, 68, 0.04);
+}
+
+.panel-inner {
+  padding: 20px 28px;
+}
+
+.input-row {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  width: -webkit-fill-available;
+  height: 100%;
+  border: 1px solid #dadada;
+  padding: 14px 17px 13px;
+}
+
+/* first-child input row 밑에오는 첫 번째 자식 */
+.input-row:first-child {
+  border-radius: 6px 6px 0 0;
+  box-shadow: none;
+}
+
+.input-row:last-child {
+  border-radius: 0 0 6px 6px;
+}
+
+.icon-cell {
+  display: table-cell;
+  width: 24px;
+  /* 수직 정렬 */
+  vertical-align: middle;
+}
+
+.icon-id {
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  margin-top: -8px;
+  background-position: -93px -203px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+  background-size: 266px 225px;
+}
+.icon-pw {
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  margin-top: -8px;
+  background-position: -129px -203px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+  background-size: 266px 225px;
+}
+.input-text {
+  position: relative;
+  display: table-cell;
+  padding-right: 30px;
+  width: -webkit-fill-available;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  /* letter-spacing : 문자와 문자 사이 간격 */
+  letter-spacing: -0.5px;
+  color: #222;
+  z-index: 4;
+}
+
+.sign-in-keep-wrapper {
+  position: relative;
+  margin-top: 13px;
+  padding-right: 90px;
+}
+
+.keep-check {
+  position: relative;
+  padding-left: 23px;
+}
+
+.ip-check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 38px;
+}
+
+.input-keep {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 15px;
+  height: 15px;
+}
+
+.keep-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: -244px -87px;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+  background-size: 266px 225px;
+}
+
+.keep-text {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #777;
+}
+
+.sign-in-button-wrapper {
+  margin-top: 38px;
+}
+
+.sign-in-button {
+  display: block;
+  width: -webkit-fill-available;
+  padding: 13px 0 13px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #03c75a;
+}
+
+.button-text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fff;
+}
+
+.find-wrapper {
+  padding: 20px 0 35px;
+  text-align: center;
+}
+
+.find-wrapper li {
+  position: relative;
+  display: inline-block;
+}
+
+.find-text {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #888;
+}
+
+.find-wrapper li + li {
+  padding-left: 28px;
+}
+
+.find-wrapper li + li::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 12px;
+  width: 1px;
+  height: 12px;
+  border-radius: 0.5px;
+  background-color: #dadada;
+}
+
+.banner-wrapper {
+  width: 460px;
+  height: 147px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.banner-content {
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+  line-height: 0;
+}
+
+.banner-image {
+  width: 460px;
+}
+
+.footer {
+  padding: 63px 0 32px;
+}
+
+.footer-inner {
+  position: relative;
+  text-align: center;
+}
+
+.footer-link li {
+  display: inline-block;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.5px;
+  color: #888;
+}
+
+.footer-link li + li {
+  position: relative;
+  padding-left: 13px;
+}
+
+.footer-link li + li::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 1px;
+  height: 11px;
+  background-color: #dadada;
+}
+
+.footer-logo {
+  display: inline-block;
+  vertical-align: bottom;
+  background-position: -157px -51px;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 15px;
+  background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_00_common_978240a6.png);
+  background-size: 244px 107px;
+}
+
+.copy {
+  padding: 0 2px;
+  font-weight: 500;
+  color: #000;
+  line-height: 16px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+}
+
+.footer-item span {
+  vertical-align: top;
+}
+
+.sign-in-error {
+  position: relative;
+  min-height: 34px;
+  margin: 24px 0 -22px;
+  padding-right: 40px;
+}
+
+.error-message {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.5px;
+  color: #ff003e;
+  vertical-align: middle;
+}
