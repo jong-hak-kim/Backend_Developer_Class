@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>네이버 : 회원가입</title>
+    <link rel="stylesheet" href="./naver-sign-up.css" />
+    <script>
+        // 데이터 입력 확인
+        const onSubmitHandler = () => {
+            const id = document.getElementById("id").value;
+            const pw1 = document.getElementById("password1").value;
+            const pw2 = document.getElementById("password2").value;
+            const name = document.getElementById("name").value;
+
+            let idCollect = [id, pw1, pw2, name];
+            idCollect.forEach(function (value, index) {
+                if (!value.trim()) {
+                    document.getElementsByClassName("error_next_box")[index].style.display = "block";
+                    return;
+                }
+                document.getElementsByClassName("error_next_box")[index].style.display = "none";
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header">
+        <div id="header-inner" class="join_membership">
+            <h1>
+                <a href="http://www.naver.com" class="logo">
+                    <span class="blind">NAVER</span>
+                </a>
+            </h1>
+        </div>
+
+        <form id="join_form" method="post">
+            <!-- container -->
+            <div id="container">
+                <div id="content">
+                    <h2 class="blind">네이버 회원가입</h2>
+                    <div class="join_content">
+                        <!-- id, pw 입력 -->
+                        <div class="join_row">
+                            <h3 class="join_title">
+                                <label for="id">아이디</label>
+                            </h3>
+                            <span class="ps_box int_id">
+                                <input tpye="text" id="id" name="id" class="int" title="id" maxlength="20">
+                                <span class="step_url">@naver.com</span>
+                            </span>
+                            <span class="error_next_box" id="id_message" style="display: none">필수
+                                정보입니다.</span>
+                            <div>
+                                <div class="join_row">
+                                    <h3 class="join_title">
+                                        <label for="password">비밀번호</label>
+                                    </h3>
+                                    <span class="ps_box int_pass_step4" id="password1Img">
+                                        <input type="password" id="password1" name="password1" class="int"
+                                            title="비밀번호 입력" aria aria-describedby="password1_massage" maxlength="20">
+                                        <span class="lbl">
+                                            <span id="password1Span" class="step_txt txt_green">안전</span>
+                                        </span>
+
+                                    </span>
+                                    </span>
+                                    <span class="error_next_box" id="password1_message" style="display: none">
+                                        필수 정보입니다.</span>
+                                    <h3 class="join_title">
+                                        <label for="password2">비밀번호 재확인</label>
+                                    </h3>
+                                    <span class="ps_box int_pass_check" id="password2Img">
+                                        <input type="password" id="password2" name="password2" class="int"
+                                            title="비밀번호 재확인 입력" aria-describedby="password2Blind" maxlength="20">
+                                    </span>
+                                    <span class="error_next_box" id="password2_message" style="display: none">
+                                        필수 정보입니다.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 이름, 생년월일 입력 -->
+                <div class="row_group">
+                    <!-- 이름 입력 -->
+                    <div class="join_row">
+                        <h3 class="join_title">
+                            <label for="name">이름</label>
+                        </h3>
+                        <span class="ps_box box_right_space">
+                            <input type="text" id="name" name="name" title="이름" class="int" maxlength="40">
+                        </span>
+                        <span class="error_next_box" id="name_message" style="display: none">필수 정보입니다.</span>
+                    </div>
+                    <!-- 생년월일 입력 -->
+                    <div class="join_row join_birthday">
+                        <h3 class="join_title">
+                            <label for="yy">생년월일</label>
+                        </h3>
+                        <div class="bir_wrap">
+                            <div class="bir_yy">
+                                <span class="ps_box">
+                                    <input type="text" id="yy" placeholder="년(4자)" aria-label="년(4자)" class="int"
+                                        maxlength="4">
+                                </span>
+                            </div>
+                            <div class="bir_mm">
+                                <span class="ps_box">
+                                    <select id="mm" class="sel" aria-label="월">
+                                        <option value>월</option>
+                                        <option value="01">1</option>
+                                        <option value="02">2</option>
+                                        <option value="03">3</option>
+                                        <option value="04">4</option>
+                                        <option value="05">5</option>
+                                        <option value="06">6</option>
+                                        <option value="07">7</option>
+                                        <option value="08">8</option>
+                                        <option value="09">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="bir_dd">
+                                <span class="ps_box">
+                                    <input tpye="text" id="dd" placeholder="일" aria-label="일" class="int" maxlength="2">
+                                    <label for="dd" class="lbl"></label>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="join_row join_sex">
+                            <h3 class="join_title">
+                                <label for="gender">성별</label>
+                            </h3>
+                            <div class="ps_box gender_code">
+                                <select id="gender" name="gender" class="sel" aria-label="성별">
+                                    <option value selected>성별</option>
+                                    <option value="M">남자</option>
+                                    <option value="F">여자</option>
+                                    <option value="U">선택 안함</option>
+                                </select>
+                            </div>
+                            <div class="join_row join_email">
+                                <h3 class="join_title">
+                                    <label for="email">
+                                        본인 확인 이메일
+                                        <span class="terms_choice">(선택)</span>
+                                    </label>
+                                </h3>
+                                <span class="ps_box int_email box_right_space">
+                                    <input type="text" id="email" name="email" placeholder="선택입력" aria-label="선택입력"
+                                        class="int" maxlength="100">
+                                </span>
+                            </div>
+                            <div class="btn_area">
+                                <button type="button" id="btnJoin" class="btn_type btn_primary"
+                                    onclick="onSubmitHandler();">
+                                    <span>가입하기</span>
+                                </button>
+                            </div>
+                    </div>
+                </div>
+        </form>
+        <!-- footer -->
+        <div id="footer">
+            <ul>
+                <li>
+                    <a href="http://policy.naver.com/rules/service.html">이용약관</a>
+                </li>
+                <li>
+                    <strong>
+                        <a href="http://policy.naver.com/policy/privacy.html">개인정보처리방침</a>
+                    </strong>
+                </li>
+                <li>
+                    <a href="http://policy.naver.com/rules/disclaimer.html">책임의 한계와 법적고지</a>
+                </li>
+                <li>
+                    <a href="https://help.naver.com/support/alias/membership/p.membership/p.membership_26.naver"
+                        target="-blank">회원정보 고객센터</a>
+                </li>
+            </ul>
+            <address>
+                <em>
+                    <a href="https://www.navercorp.com/" target="_blank" class="footer_logo">
+                        <span class="blind">naver</span>
+                    </a>
+                </em>
+                <em class="copy">Copyright</em>
+                <em class="u_cri">@</em>
+                <a href="https://www.navercorp.com/" target="-blank" class="u_cra">NAVER Corp.</a>
+                <span class="all_r">All Rights Reserved.</span>
+            </address>
+        </div>
+    </div>
+</body>
+</body>
+
+</html>
