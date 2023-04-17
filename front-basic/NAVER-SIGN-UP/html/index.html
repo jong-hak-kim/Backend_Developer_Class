@@ -6,25 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>네이버 : 회원가입</title>
-    <link rel="stylesheet" href="./naver-sign-up.css" />
-    <script>
-        // 데이터 입력 확인
-        const onSubmitHandler = () => {
-            const id = document.getElementById("id").value;
-            const pw1 = document.getElementById("password1").value;
-            const pw2 = document.getElementById("password2").value;
-            const name = document.getElementById("name").value;
-
-            let idCollect = [id, pw1, pw2, name];
-            idCollect.forEach(function (value, index) {
-                if (!value.trim()) {
-                    document.getElementsByClassName("error_next_box")[index].style.display = "block";
-                    return;
-                }
-                document.getElementsByClassName("error_next_box")[index].style.display = "none";
-            });
-        }
-    </script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type="text/javascript" src="../javascript/index.js"> </script>
 </head>
 
 <body>
