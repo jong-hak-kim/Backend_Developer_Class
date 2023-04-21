@@ -1,5 +1,7 @@
 package com.jonghak.firstproject.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.jonghak.firstproject.dto.request.ExampleDto;
+import com.jonghak.firstproject.dto.response.ExampleResponseDto;
 
 class ParamDto {
     private String data1;
@@ -110,6 +115,25 @@ public class RestApiController {
             // @RequestBody String data
             @RequestBody ParamDto dto) {
         return ResponseEntity.status(408).body(dto);
+    }
+
+    @PostMapping("lombok")
+    public ResponseEntity<ExampleResponseDto> lombok(
+            @Valid @RequestBody ExampleDto requestBody) {
+
+        String data1 = requestBody.getParameter1();
+        String data2 = requestBody.getParameter2();
+        String data3 = requestBody.getParameter3();
+
+        // ExampleResponseDto responseData = new ExampleResponseDto(data1, data2,
+        // data3);
+
+        ExampleResponseDto responseData = ExampleResponseDto.builder().data1(data1).build(); // builder는 여기서는
+                                                                                             // ExampleResponseDto의
+                                                                                             // 인스턴스를 생성해주는데 data1 값을
+                                                                                             // 넣어서 만들어주는 메서드이다
+
+        return ResponseEntity.status(200).body(responseData);
     }
 
 }
