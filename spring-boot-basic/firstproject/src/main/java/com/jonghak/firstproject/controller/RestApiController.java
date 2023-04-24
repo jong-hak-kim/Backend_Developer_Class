@@ -2,7 +2,9 @@ package com.jonghak.firstproject.controller;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.jonghak.firstproject.dto.request.ExampleDto;
 import com.jonghak.firstproject.dto.response.ExampleResponseDto;
+import com.jonghak.firstproject.service.RestApiService;
+import com.jonghak.firstproject.service.Implement.RestApiServiceImplement;
 
 class ParamDto {
     private String data1;
@@ -46,6 +50,12 @@ class ParamDto {
 @RequestMapping(value = "api")
 public class RestApiController {
 
+    private RestApiService restApiService;
+
+    public RestApiController(RestApiServiceImplement restApiService) {
+        this.restApiService = restApiService;
+    }
+
     @RequestMapping(method = { RequestMethod.GET }, value = "hello2")
     public String hello2() {
         return "hello2";
@@ -56,7 +66,7 @@ public class RestApiController {
     // * @RequestMapping(method = RequestMethod.GET, value="get-method")
     @GetMapping("get-method")
     public String getMethod() {
-        return "Response of Get Request";
+        return restApiService.getMethod();
     }
 
     // # Post Method @PostMapping
@@ -64,7 +74,7 @@ public class RestApiController {
     // * @RequestMapping(method = RequestMethod.POST, value="post-method")
     @PostMapping("post-method")
     public String postMethod() {
-        return "Response of Post Request";
+        return restApiService.postMethod();
     }
 
     // # Patch Method @PatchMapping
@@ -72,7 +82,7 @@ public class RestApiController {
     // * @RequestMapping(method = RequestMethod.PATCH, value="patch-method")
     @PatchMapping("patch-method")
     public String patchMethod() {
-        return "Response of Patch Request";
+        return restApiService.patchMethod();
     }
 
     // # Delete Method @DeleteMapping
@@ -80,7 +90,7 @@ public class RestApiController {
     // * @RequestMapping(method = RequestMethod.DELETE, value="patch-method")
     @DeleteMapping("delete-method")
     public String deleteMethod() {
-        return "Response of Delete Request";
+        return restApiService.deleteMethod();
     }
 
     // # PathVariable() 로 Get, Delete Method에서 데이터 받기
