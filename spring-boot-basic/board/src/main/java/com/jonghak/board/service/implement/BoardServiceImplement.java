@@ -143,7 +143,7 @@ public class BoardServiceImplement implements BoardService {
 
             boardEntity.setTitle(boardTitle);
             boardEntity.setContent(boardContent);
-            boardEntity.setBoardImageUrl(boardImageUrl);
+            boardEntity.setBoardImageUrl(boardImageUrl); 
 
             boardRepository.save(boardEntity);
 
