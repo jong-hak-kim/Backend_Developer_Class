@@ -2,7 +2,6 @@ package com.jonghak.board.common.util;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jonghak.board.dto.response.ResponseDto;
 
