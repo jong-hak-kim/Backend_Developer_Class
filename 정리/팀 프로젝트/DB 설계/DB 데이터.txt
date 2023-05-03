@@ -6,7 +6,6 @@
 위도(latitude)
 경도(longitude)
 
-경기도
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('경기도 수원시 장안구 영화동 320-2', '수원화성.jpg', '수원화성', '경기도', 37.28697858495394, 127.01178165046227, '2023-05-03 09:03:18');
 
@@ -16,7 +15,6 @@ VALUES ('경기도 수원시 팔달구 정조로 825', '화성행궁.jpg', '화�
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('경기도 가평군 상면 수목원로 432', '아침고요수목원.jpg', '아침고요수목원', '경기도', 37.743006767006094, 127.351646508735, '2023-05-03 10:54:49');
 
-강원도
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('강원도 강릉시 강동면 정동진리 259', '정동진해변.jpg', '정동진해변', '강원도', 37.690566037088026, 129.0351548006098, '2023-05-03 11:01:03');
 
@@ -26,7 +24,6 @@ VALUES ('강원도 춘천시 남산면 남이섬길 1', '남이섬.jpg', '남이
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('강원도 강릉시 율곡로3139번길 24', '오죽헌.jpg', '오죽헌','강원도', 37.77950431878704, 128.87733341865484, '2023-05-03 12:01:19');
 
-충청북도
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('충청북도 청주시 상당구 문의면 청남대길 646', '청남대.jpg', '청남대', '충청북도', 36.4628664194975, 127.49174875730311, '2023-05-03 12:15:19');
 
@@ -36,7 +33,6 @@ VALUES ('충청북도 청주시 상당구 산성동 산28-2', '상당산성.jpg'
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('충청북도 제천시 모산동 241', '의림지.jpg', '의림지', '충청북도', 37.17319180531898, 128.21058519749909, '2023-05-03 12:25:50');
 
-충청남도
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('충청남도 태안군 소원면 천리포1길 187', '천리포수목원.jpg', '천리포수목원', '충청남도', 36.79845996923783, 126.14996565166999, '2023-05-03 12:07:54');
  
