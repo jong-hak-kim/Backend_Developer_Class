@@ -1,11 +1,3 @@
-여행지 대표사진 URL(write_image_url)
-여행지 이름(write_touristspot_name)
-여행지 주소(write_destination_address)
-지역(write_region)
-작성날짜(write_touristspot_date)
-위도(latitude)
-경도(longitude)
-
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('경기도 수원시 장안구 영화동 320-2', '수원화성.jpg', '수원화성', '경기도', 37.28697858495394, 127.01178165046227, '2023-05-03 09:03:18');
 
