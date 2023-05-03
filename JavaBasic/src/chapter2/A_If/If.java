@@ -1,4 +1,4 @@
-package chapter2.A_Jf;
+package chapter2.A_If;
 
 // if 구문
 // 조건에 따라 실행시키고자 하는 로직(프로세스)이 다를 때 사용하는 구문

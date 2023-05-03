@@ -1,0 +1,61 @@
+메인화면 배너 이미지 테이블(Banner)
+ : 이미지 URL(main_image_url), 이미지 메세지(image_message)
+
+
+회원 테이블(User) 
+ : 이름(user_name), 생년월일(user_birth), 이메일(user_email), 비밀번호(user_password), 휴대전화번호(user_phone_number), 가입날짜시간(user_register_date)
+
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+
+상품 테이블(Tourist_product)(여행지 코스)
+ : 상품 번호(product_number)(PK AI), 상품명(product_title), 경로(product_tour_route), 경비(product_money), 작성 날짜(product_write_date), 총 여행 일정(product_total_schedule), 
+
+
+상품 일차 테이블(daily_travel_date) -> 관계 테이블
+: 순번(daily_travel_number)(PK), 상품 번호(product_number)(FK AI), 여행지 작성 번호(touristspot_number)(FK AI), 일차(daily_travel_date), 여행지 대표사진 URL(write_image_url), 여행지 이름(write_touristspot_name), 여행지 주소(write_destination_address)
+
+
+플래너 테이블(planner)
+: 플래너 순번(planner_number)(PK), 제목(planner_title), 총 여행 일정(total_planner_travel_schedule), 경로(planner_tour_route), 경비(planner_money), 사용자 이메일(planner_user_email)
+
+
+플래너 일차 테이블(planner_daily_travel_date) -> 관계 테이블
+: 순번(planner_daily_number)(PK), 플래너 순번(planner_number)(FK AI), 여행지 작성 번호(tourlistspot_number)(FK AI), 일차(planner_travel_date), 여행지 대표사진 URL(write_image_url), 여행지 이름(write_touristspot_name), 여행지 주소(write_destination_address)	
+
+
+여행지 작성 테이블(touristspot_write)(여행지 코스, 플래너 작성 페이지)
+: 여행지 작성 번호(touristspot_number)(PK AI) 여행지 대표사진 URL(write_image_url), 여행지 이름(write_touristspot_name), 여행지 주소(write_destination_address), 지역(write_region), 작성날짜(write_touristspot_date), 위도(latitude), 경도(longitude)
+
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+
+
+추천 여행지 테이블(recommendation_touristspot)
+: 여행지 번호(touristspot_number)(PK AI), 이미지 URL(recommendation_touristspot_image_url), 여행지 제목(touristspot_title), 본문 내용(content), 작성날짜(recommendation_touristspot_write_date), 주소(touristspot_address), 이용시간(touristspot_use_time), 문의 및 안내(touristspot_information)
+
+
+공지사항 게시판 테이블(notice_board)
+ : 글 번호(notice_board_number)(PK AI), 글 제목(notice_board_title), 공지사항 내용(notice_board_content), 날짜(notice_board_date)
+
+
+문의사항 게시판 테이블(question_board)
+ : 글 번호(question_board_number)(PK AI), 글 제목(question_board_title), 작성자 이메일(question_board_writer_email)(FK), 문의사항 내용(question_board_content), 날짜(question_board_date), 답변상태(answer_status)(boolean), 작성자 이름(question_writer_name)
+ 
+
+댓글 테이블(comment)
+ : 이메일(comment_email)(PK), 게시물 번호(comment_number)(PK), 작성 시간(comment_write_time), 댓글 내용(comment_content), 댓글 작성한 유저 이름(comment_user_name)
+
+
+좋아요 테이블(like)
+ : 좋아요한 유저 이메일(like_user_email)(PK), 좋아요한 상품(like_product), 상품번호(product_number)(PK), 좋아요 수(like_count), 
+
+
+결제 테이블(Payment)
+번호 : payment_id  
+여행 코스명 : payment_tour_name 
+결제 금액 :payment_amount
+결제 상태 : payment_status
+유저 이메일 : payment_user_email
+결제일 : payment_datatime
+
+지역 테이블(region)
+지역이름 (region_name)
