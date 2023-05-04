@@ -49,6 +49,7 @@ public class UserServiceImplement implements UserService {
                 responseBody = new ResponseDto("EP", "Existent User Phone Number");
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseBody);
             }
+            
 
             // @ 유저 레코드 삽입
             UserEntity userEntity = new UserEntity(dto);
