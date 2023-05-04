@@ -1,4 +1,25 @@
-수원화성 -> 화성행궁 -> 팔달문
+1일차 연천 경순왕릉 -> 연천 숭의전지 -> 연천 당포성
+2일차 전곡선사박물관 -> 재인폭포 -> 태풍전망대
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('경기도 연천군 장남면 장남로 288', '연천 경순왕릉.jpg', '연천 경순왕릉', '경기도', 37.99068853743574, 126.8436226292362, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('경기도 연천군 미산면 아미리 7', '연천 숭의전지.jpg', '연천 숭의전지', '경기도', 38.02433546241976, 126.9730107351964, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('경기도 연천군 미산면 동이리 780', '연천 당포성.jpg', '연천 당포성', '경기도', 38.023132724873946, 126.98588916438287, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('경기도 연천군 전곡읍 평화로443번길 2', '전곡선사박물관.jpg', '전곡선사박물관', '경기도', 38.01159999762617, 127.06411225155824, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('경기도 연천군 연천읍 부곡리 220', '재인폭포.jpg', '재인폭포', '경기도', 38.077344761682035, 127.14330382812653, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('경기도 연천군 중면 중사리 산531', '태풍전망대.jpg', '태풍전망대', '경기도', 38.12653802692499, 126.97383992572561, '2023-05-03');
+
+
 
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('경기도 수원시 장안구 영화동 320-2', '수원화성.jpg', '수원화성', '경기도', 37.28697858495394, 127.01178165046227, '2023-05-03');
@@ -9,30 +30,46 @@ VALUES ('경기도 수원시 팔달구 정조로 825', '화성행궁.jpg', '화�
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('경기도 수원시 팔달구 정조로 780', '팔달문.jpg', '팔달문', '경기도', 37.27756437852034, 127.01674144700225, '2023-05-03');
 
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES ('경기도 가평군 상면 수목원로 432', '아침고요수목원.jpg', '아침고요수목원', '경기도', 37.743006767006094, 127.351646508735, '2023-05-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES ('경기도 파주시 탄현면 헤이리마을길 82-105', '헤이리 예술마을.jpg', '헤이리 예술마을', '경기도', 37.7881792343257, 126.69896269243237, '2023-05-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES ('경기도 파주시 장단면 제3땅굴로 310', '도라전망대.jpg', '도라전망대', '경기도', 37.91105523127662, 126.70609300821603, '2023-05-03');
-
 --
 
-정동진해변 -> 하슬라아트월드 -> 강릉통일공원
+1일차 안목해변 -> 강릉송정해수욕장 -> 강문해변 -> 경포대
+2일차 경포호 -> 사근진해수욕장 -> 하조대 전망대
+3일차 아바이마을 갯배 선착장 -> 영금정 -> 외옹치 바다향기로
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('강원도 강릉시 창해로14번길 20-1', '안목해변.jpg', '안목해변', '강원도', 37.772258063959214, 128.94828098245384, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('강원도 강릉시 송정동 1', '강릉송정해수욕장.jpg', '강릉송정해수욕장', '강원도', 37.77983097838479, 128.93781949087796, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('강원 강릉시 강문동 159-43', '강문해변.jpg', '강문해변', '강원도', 37.79481986948208, 128.91917354870466, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('강원도 강릉시 경포로 365', '경포대.jpg', '경포대', '강원도', 37.79507895992871, 128.8966461168178, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('강원도 강릉시 저동 94', '경포호.jpg', '경포호', '강원도', 37.79620232522634, 128.90309462655824, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('강원도 강릉시 안현동 5-1', '사근진해수욕장.jpg', '사근진해수욕장', '강원도', 37.8136124375805, 128.89756032602247, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('강원도 양양군 현북면 하륜길 54', '하조대 전망대.jpg', '하조대 전망대', '강원도', 38.02242485566848, 128.72908900561183, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('강원도 속초시 청호로 122 (청호동)', '아바이마을 갯배 선착장.jpg', '아바이마을 갯배 선착장', '강원도', 38.20295814442007, 128.5922763750258, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('강원도 속초시 동명동 영금정로 43', '영금정.jpg', '영금정', '강원도', 38.211798781381724, 128.60160847290692, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('강원도 속초시 대포동 656-14', '외옹치 바다향기로.jpg', '외옹치 바다향기로', '강원도', 38.17939321441707, 128.6117173554011, '2023-05-03');
+
+
 
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('강원도 강릉시 강동면 정동진리 259', '정동진해변.jpg', '정동진해변', '강원도', 37.690566037088026, 129.0351548006098, '2023-05-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES ('강원도 강릉시 강동면 율곡로 1441', '하슬라아트월드.jpg', '하슬라아트월드', '강원도', 37.705845702462106, 129.0094689446798, '2023-05-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES ('강원도 강릉시 강동면 율곡로 1715-38', '강릉통일공원.jpg', '강릉통일공원', '강원도', 37.720049131949246, 128.99744045444285, '2023-05-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES ('강원도 춘천시 남산면 남이섬길 1', '남이섬.jpg', '남이섬', '강원도', 37.79146788666543, 127.52518479090415, '2023-05-03');
 
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('강원도 강릉시 율곡로3139번길 24', '오죽헌.jpg', '오죽헌','강원도', 37.77950431878704, 128.87733341865484, '2023-05-03');
@@ -41,8 +78,6 @@ INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_
 VALUES ('강원도 평창군 대관령면 대관령마루길 483-32', '대관령 양떼목장.jpg', '대관령 양떼목장','강원도', 37.68984045285644, 128.75302078953933, '2023-05-03');
 
 --
-
-용추폭포유리전망대 -> 의림지 -> 의림지솔밭공원
 
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('충청북도 제천시 의암동 산13-2', '용추폭포유리전망대.jpg', '용추폭포유리전망대', '충청북도', 37.17212534148212, 128.20847959416832, '2023-05-03');
@@ -53,18 +88,32 @@ VALUES ('충청북도 제천시 모산동 241', '의림지.jpg', '의림지', '�
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('충청북도 제천시 모산동 568-1', '의림지솔밭공원.jpg', '의림지솔밭공원', '충청북도', 37.18331027888421, 128.20525981945084, '2023-05-03');
 
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES ('충청북도 제천시 수산면 다불리 36', '괴곡성벽길 전망대.jpg', '괴곡성벽길 전망대', '충청북도', 36.951095, 128.214557, '2023-05-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES ('충청북도 청주시 상당구 문의면 청남대길 646', '청남대.jpg', '청남대', '충청북도', 36.4628664194975, 127.49174875730311, '2023-05-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES ('충청북도 청주시 상당구 산성동 산28-2', '상당산성.jpg', '상당산성', '충청북도', 36.661484790861316, 127.53999441047186, '2023-05-03');
-
 --
+1박 2일
+1일차 홍성 죽도 -> 예산 아그로랜드 태신목장 -> 공주 공산성
+2일차 공주 한옥마을 -> 공주 제민천 하숙마을 -> 연미산자연미술공원
 
-태안 소근진성 -> 두웅습지 -> 태안 신두리 해안사구
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('충청남도 홍성군 서부면 죽도리 48', '홍성 죽도.jpg', '홍성 죽도', '충청남도', 36.51834446136922, 126.44144481973268, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('충청남도 예산군 고덕면 상몽2길 231', '예산 아그로랜드 태신목장.jpg', '예산 아그로랜드 태신목장', '충청남도', 36.8017850152536, 126.70406411590643, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('충청남도 공주시 웅진동 웅진로 280', '공산성.jpg', '공산성', '충청남도', 36.46326290426765, 127.1263144847535, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('충청남도 공주시 웅진동 관광단지길 12', '공주 한옥마을.jpg', '공주 한옥마을', '충청남도', 36.46458461382931, 127.10877265926271, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('충청남도 공주시 당간지주길 21', '공주하숙마을.jpg', '공주하숙마을', '충청남도', 36.45218412517051, 127.12317034153442, '2023-05-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES ('충청남도 공주시 우성면 연미산고개길 98', '연미산자연미술공원.jpg', '연미산자연미술공원', '충청남도', 36.47356789880793, 127.10261482212334, '2023-05-03');
+
+
+---
 
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('충청남도 태안군 소원면 소근리', '태안 소근진성.jpg', '태안 소근진성', '충청남도', 36.819725283319634, 126.18401499942807, '2023-05-03');
@@ -74,73 +123,3 @@ VALUES ('충청남도 태안군 원북면 신두해변길 291-30', '두웅습지
 
 INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
 VALUES ('충청남도 태안군 원북면 신두리 산 263-1', '태안 신두리 해안사구.jpg', '태안 신두리 해안사구', '충청남도', 6.844625901286484, 126.19646699812269, '2023-05-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES ('충청남도 태안군 소원면 천리포1길 187', '천리포수목원.jpg', '천리포수목원', '충청남도', 36.79845996923783, 126.14996565166999, '2023-05-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES ('충청남도 천안시 동남구 목천읍 독립기념관로 1', '독립기념관.jpg', '독립기념관', '충청남도', 36.783676675454224, 127.22282123468456, '2023-05-03');
-
-
-
---
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'경상북도 경주시 진현동 15-1', '불국사.jpg', '불국사', '경상북도', 35.789938460089495, 129.33205563282604, '2023-06-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'경상북도 경주시 인왕동 839-1', '첨성대.jpg', '첨성대', '경상북도', 35.83472010093849, 129.2189333851124, '2023-06-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'경상북도 경주시 원화로 102', '안압지.jpg', '안압지', '경상북도', 35.834717761524864, 129.22685050576652, '2023-06-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'경상남도 창원시 진해구 여명로', '여좌천.jpg', '여좌천', '경상남도', 35.1560810717494, 128.65953100792134, '2023-06-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'경상남도 창원시 진해구 경화동 경화역', '경화역 벚꽃길.jpg', '경화역 벚꽃길', '경상남도', 35.15921185928403, 128.68667852532582, '2023-06-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'경상남도 통영시 멘데해안길 205', '이순신 공원.jpg', '이순신 공원', '경상남도', 34.84428584919076, 128.44221260573147, '2023-06-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'전라북도 전주시 완산구 기린대로 99', '한옥마을.jpg', '한옥마을', '전라북도', 35.81479457355991, 127.15255205489072, '2023-06-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'전라북도 남원시 금동 요천로 1447', '광한루원.jpg', '광한루원', '전라북도', 35.40388875146349, 127.37973003393262, '2023-06-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'전라북도 정읍시 내장산로 936', '내장산국립공원.jpg', '내장산국립공원', '전라북도', 35.48554684249913, 126.90545828293682, '2023-06-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'전라남도 담양군 가사문학면 소쇄원길 17', '소쇄원.jpg', '소쇄원', '전라남도', 35.184116482192984, 127.01223331839674, '2023-06-03');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'전라남도 순천시 순천만길 513-25', '순천만습지.jpg', '순천만습지', '전라남도', 34.885551571889216, 127.50956066245786, '2023-06-04');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'전라남도 여수시 돌산읍 우두리 산1', '돌산공원.jpg', '돌산공원', '전라남도', 34.73051702035668, 127.7399662203143, '2023-06-04');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'제주특별자치도 서귀포시 성산읍 일출로 284-12', '성산일출봉.jpg', '성산일출봉', '제주도', 33.45902358558704, 126.94046230131724, '2023-06-05');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'제주특별자치도 제주시 우도면', '우도.jpg', '우도', '제주도', 33.504263570644525, 126.9556490629753, '2023-06-05');
-
-INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
-VALUES (
-'제주특별자치도 서귀포시 성산읍 섭지코지로', '섭지코지.jpg', '섭지코지', '제주도', 33.42392318805239, 126.93060764000974, '2023-06-05');
