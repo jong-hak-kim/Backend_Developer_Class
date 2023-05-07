@@ -1,0 +1,59 @@
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상북도 경주시 진현동 15-1', '불국사.jpg', '불국사', '경상북도', 35.789938460089495, 129.33205563282604, '2023-06-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상북도 경주시 인왕동 839-1', '첨성대.jpg', '첨성대', '경상북도', 35.83472010093849, 129.2189333851124, '2023-06-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상북도 경주시 원화로 102', '안압지.jpg', '안압지', '경상북도', 35.834717761524864, 129.22685050576652, '2023-06-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상남도 창원시 진해구 여명로', '여좌천.jpg', '여좌천', '경상남도', 35.1560810717494, 128.65953100792134, '2023-06-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상남도 창원시 진해구 경화동 경화역', '경화역 벚꽃길.jpg', '경화역 벚꽃길', '경상남도', 35.15921185928403, 128.68667852532582, '2023-06-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상남도 통영시 멘데해안길 205', '이순신 공원.jpg', '이순신 공원', '경상남도', 34.84428584919076, 128.44221260573147, '2023-06-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'전라북도 전주시 완산구 기린대로 99', '한옥마을.jpg', '한옥마을', '전라북도', 35.81479457355991, 127.15255205489072, '2023-06-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'전라북도 남원시 금동 요천로 1447', '광한루원.jpg', '광한루원', '전라북도', 35.40388875146349, 127.37973003393262, '2023-06-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'전라북도 정읍시 내장산로 936', '내장산국립공원.jpg', '내장산국립공원', '전라북도', 35.48554684249913, 126.90545828293682, '2023-06-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'전라남도 담양군 가사문학면 소쇄원길 17', '소쇄원.jpg', '소쇄원', '전라남도', 35.184116482192984, 127.01223331839674, '2023-06-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'전라남도 순천시 순천만길 513-25', '순천만습지.jpg', '순천만습지', '전라남도', 34.885551571889216, 127.50956066245786, '2023-06-04');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'전라남도 여수시 돌산읍 우두리 산1', '돌산공원.jpg', '돌산공원', '전라남도', 34.73051702035668, 127.7399662203143, '2023-06-04');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'제주특별자치도 서귀포시 성산읍 일출로 284-12', '성산일출봉.jpg', '성산일출봉', '제주도', 33.45902358558704, 126.94046230131724, '2023-06-05');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'제주특별자치도 제주시 우도면', '우도.jpg', '우도', '제주도', 33.504263570644525, 126.9556490629753, '2023-06-05');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'제주특별자치도 서귀포시 성산읍 섭지코지로', '섭지코지.jpg', '섭지코지', '제주도', 33.42392318805239, 126.93060764000974, '2023-06-05');

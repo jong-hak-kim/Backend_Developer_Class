@@ -1,0 +1,46 @@
+경상북도, 당일여행
+제목 : 문화유적 탐방 코스
+경비 : 17,000원
+경로 : 국립경주박물관 -> 테디베어 뮤지엄 경주 -> 신라역사과학관
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상북도 경주시 일정로 186', '국립경주박물관.jpg', '국립경주박물관', '경상북도', 35.829117413379755, 129.2279636041615, '2023-06-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상북도 경주시 보문로 280-34', '바니베어 뮤지움.jpg', '바니베어 뮤지움', '경상북도', 35.85167889500643, 129.2768798014596, '2023-06-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상북도 경주시 하동공예촌길 33', '신라역사과학관.jpg', '신라역사과학관', '경상북도', 35.80703033354213, 129.31121848290806, '2023-06-03');
+
+경상남도, 1박 2일
+제목 : 힐링 여행 코스
+경비 : 9,500원
+1일차 : 진해내수면 환경생태공원 -> 제황산공원 -> 창원해양공원
+2일차 : 원예예술촌 -> 남해 물건리 방조어부림 -> 국립남해편백 자연휴양림
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상남도 창원시 진해구 여명로25번길 55', '진해내수면 환경생태공원.jpg', '진해내수면 환경생태공원', '경상남도', 35.16396055285864, 128.65999015604802, '2023-07-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상남도 창원시 진해구 제황산동 28-5', '제황산공원.jpg', '제황산공원', '경상남도', 35.148308209878174, 128.66542178725393, '2023-07-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상남도 창원시 진해구 웅천동 명동로 62', '창원해양공원.jpg', '창원해양공원', '경상남도', 35.0919004478068, 128.7199182788227, '2023-07-03');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상남도 남해군 삼동면 예술길 39', '원예예술촌.jpg', '원예예술촌', '경상남도', 34.803592427706, 128.03611434819365, '2023-07-04');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상남도 남해군 삼동면 물건리', '물건리 방조어부림.jpg', '물건리 방조어부림', '경상남도', 34.79684679862983, 128.05044778494215, '2023-07-04');
+
+INSERT INTO TouristSpotWrite(write_tourist_spot_address, write_image_url, write_tourist_spot_name, write_region, latitude, longitude, write_tourist_spot_date)
+VALUES (
+'경상남도 남해군 삼동면 금암로 658', '국립남해편백 자연휴양림.jpg', '국립남해편백 자연휴양림', '경상남도', 34.75176102078214, 128.01964498778716, '2023-07-04');
