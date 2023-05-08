@@ -42,6 +42,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             }
 
             String email = jwtProvider.validate(jwt); // @ subject에 있는 이메일 가져오기
+            // UserRole email = jwtProvider.validate(jwt); // @ subject에 있는 이메일 가져오기
 
             AbstractAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(email, null,
                     AuthorityUtils.NO_AUTHORITIES);

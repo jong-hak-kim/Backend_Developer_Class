@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import com.jonghak.board.common.util.CustomResponse;
 import com.jonghak.board.dto.request.board.PatchBoardRequestDto;
 import com.jonghak.board.dto.request.board.PostBoardRequestDto;
+import com.jonghak.board.dto.request.board2.PatchBoardRequestDto2;
+import com.jonghak.board.dto.request.board2.PostBoardRequestDto2;
 import com.jonghak.board.dto.response.ResponseDto;
 import com.jonghak.board.dto.response.board.GetBoardListResponseDto;
 import com.jonghak.board.dto.response.board.GetBoardResponseDto;
@@ -42,31 +44,43 @@ public class BoardServiceImplement implements BoardService {
 
     @Override
     public ResponseEntity<ResponseDto> postBoard(PostBoardRequestDto dto) {
+
+        String boardWriterEmail = dto.getBoardWriterEmail();
+        PostBoardRequestDto2 dto2 = new PostBoardRequestDto2(dto);
+
+        ResponseEntity<ResponseDto> response = postBoard(boardWriterEmail, dto2);
+
+        return response;
+    }
+
+    @Override
+    public ResponseEntity<ResponseDto> postBoard(String userEmail, PostBoardRequestDto2 dto) {
+
         ResponseDto body = null;
 
-        String boardWriterEmail = dto.getBoaredWriterEmail();
-
         try {
-            // @ TODO : 존재하지 않는 유저 오류 반환
-            boolean existedUserEmail = userRepository.existsByEmail(boardWriterEmail);
+            // * 존재하지 않는 유저 오류 반환 //
+            boolean existedUserEmail = userRepository.existsByEmail(userEmail);
             if (!existedUserEmail) {
-                ResponseDto errorbody = new ResponseDto("NU", "Non-Existent User Email");
-                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorbody);
+                ResponseDto errorBody = new ResponseDto("NU", "Non-Existent User Email");
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorBody);
             }
 
-            BoardEntity boardEntity = new BoardEntity(dto);
+            BoardEntity boardEntity = new BoardEntity(userEmail, dto);
             boardRepository.save(boardEntity);
 
             body = new ResponseDto("SU", "Success");
 
         } catch (Exception exception) {
-            // TODO : 데이터베이스 오류 반환
+            // * 데이터베이스 오류 반환 //
             exception.printStackTrace();
-            ResponseDto errorbody = new ResponseDto("DE", "Database Error");
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorbody);
+            ResponseDto errorBody = new ResponseDto("DE", "Database Error");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorBody);
         }
-        // TODO : 성공 반환
+
+        // * 성공 반환 //
         return ResponseEntity.status(HttpStatus.OK).body(body);
+
     }
 
     @Override
@@ -103,7 +117,7 @@ public class BoardServiceImplement implements BoardService {
     }
 
     @Override
-    public ResponseEntity<? super GetBoardListResponseDto> getBoardlist() {
+    public ResponseEntity<? super GetBoardListResponseDto> getBoardList() {
         GetBoardListResponseDto body = null;
 
         try {
@@ -139,8 +153,18 @@ public class BoardServiceImplement implements BoardService {
     @Override
     public ResponseEntity<ResponseDto> patchBoard(PatchBoardRequestDto dto) {
 
-        int boardNumber = dto.getBoardNumber();
         String userEmail = dto.getUserEmail();
+        PatchBoardRequestDto2 dto2 = new PatchBoardRequestDto2(dto);
+
+        ResponseEntity<ResponseDto> response = patchBoard(userEmail, dto2);
+
+        return response;
+    }
+
+    @Override
+    public ResponseEntity<ResponseDto> patchBoard(String userEmail, PatchBoardRequestDto2 dto) {
+
+        int boardNumber = dto.getBoardNumber();
         String boardTitle = dto.getBoardTitle();
         String boardContent = dto.getBoardContent();
         String boardImageUrl = dto.getBoardImageUrl();

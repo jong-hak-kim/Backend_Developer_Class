@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.jonghak.board.dto.response.ResponseDto;
 import com.jonghak.board.entity.resultSet.BoardListResultSet;
-import com.mysql.cj.protocol.Resultset;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

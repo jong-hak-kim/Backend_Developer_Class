@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 public class PostBoardRequestDto {
     @NotBlank
     @Email
-    private String boaredWriterEmail;
+    private String boardWriterEmail;
     @NotBlank
     private String boardTitle;
     @NotBlank

@@ -1,5 +1,6 @@
 package com.jonghak.board.service.implement;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -23,6 +24,7 @@ public class AuthServiceImplement implements AuthService {
     private JwtProvider jwtProvider;
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
     public AuthServiceImplement(UserRepository userRepository, JwtProvider jwtProvider) { // @ 제어 역전은 UserRepository에서만 할 것이다
         this.userRepository = userRepository;
         this.jwtProvider = jwtProvider;
