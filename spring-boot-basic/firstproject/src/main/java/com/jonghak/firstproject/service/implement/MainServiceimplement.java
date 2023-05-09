@@ -1,4 +1,4 @@
-package com.jonghak.firstproject.implement;
+package com.jonghak.firstproject.service.implement;
 
 import org.springframework.stereotype.Component;
 

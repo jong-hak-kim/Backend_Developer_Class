@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jonghak.firstproject.dto.request.ExampleDto;
 import com.jonghak.firstproject.dto.response.ExampleResponseDto;
 import com.jonghak.firstproject.service.RestApiService;
-import com.jonghak.firstproject.Implement.RestApiServiceImplement;
+import com.jonghak.firstproject.service.implement.RestApiServiceImplement;
 
 class ParamDto {
     private String data1;
