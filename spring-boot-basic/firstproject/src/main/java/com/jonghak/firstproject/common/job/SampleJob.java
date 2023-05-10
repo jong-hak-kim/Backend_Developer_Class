@@ -17,7 +17,7 @@ public class SampleJob implements Job {
     // @ 실제 작업이 실행될 메서드
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
-        System.out.println("Scheduler!!");
+        // System.out.println("Scheduler!!");
     }
 
     // @ Job Detail 설정 (Job의 메타 데이터 지정)
